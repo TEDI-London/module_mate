@@ -4,12 +4,20 @@ $("document").ready(function(){
   //Sample Data
 
   // create an array with nodes
-  var moduleOneNodes = new vis.DataSet([
+  var ENG1101 = new vis.DataSet([
   { id: 1, label: "PS10100" },
   { id: 2, label: "PS10101" },
   { id: 3, label: "DI10100" },
   { id: 4, label: "PS10102" },
   { id: 5, label: "DI10101" },
+  ]);
+
+  var ENG1102= new vis.DataSet([
+  { id: 1, label: "test1" },
+  { id: 2, label: "test2" },
+  { id: 3, label: "test3" },
+  { id: 4, label: "test4" },
+  { id: 5, label: "test5" },
   ]);
 
   var edges = new vis.DataSet([
@@ -18,7 +26,7 @@ $("document").ready(function(){
   // create a network
   var container = document.getElementById("mynetwork");
   var data = {
-    nodes: moduleOneNodes,
+    nodes: ENG1101,
     edges: edges,
   };
   var options = {
@@ -34,7 +42,6 @@ $("document").ready(function(){
       deleteEdge: true
     }
   };
-  var network = new vis.Network(container, data, options);
 
 
   //If you select the module button, display the module drop down
@@ -48,6 +55,27 @@ $("document").ready(function(){
       }
   });
 
+  $("#ENG1102").on('click',(e) => {
+    var data = {
+      nodes: ENG1102,
+      edges: edges,
+    };
+
+      var network = new vis.Network(container, data, options);
+
+  })
+
+  $("#ENG1101").on('click',(e) => {
+    var data = {
+      nodes: ENG1101,
+      edges: edges,
+    };
+
+      var network = new vis.Network(container, data, options);
+
+  })
+
+  var network = new vis.Network(container, data, options);
 
 
 })
