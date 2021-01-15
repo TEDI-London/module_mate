@@ -66,7 +66,7 @@ $("document").ready(function(){
   };
   var options = {
     physics:{
-      enabled: false
+      enabled: true
     },
     manipulation:{
       enabled:true,
@@ -103,6 +103,16 @@ $("document").ready(function(){
   $("#ENG1101").on('click',(e) => {
     var data = {
       nodes: ENG1101,
+      edges: edges,
+    };
+
+      var network = new vis.Network(container, data, options);
+
+  })
+
+  $("#ENG1201").on('click',(e) => {
+    var data = {
+      nodes: ENG1201,
       edges: edges,
     };
 
