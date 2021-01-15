@@ -23,7 +23,7 @@ $("document").ready(function(){
   { id: 16, label: "ST10102" }
   ]);
 
-  var ENG1102= new vis.DataSet([
+  var ENG1102 = new vis.DataSet([
   { id: 20, label: "ST10103" },
   { id: 21, label: "ST10104" },
   { id: 22, label: "ST10105" },
@@ -40,7 +40,20 @@ $("document").ready(function(){
   { id: 33, label: "BS10100" }
   ]);
 
-  
+  var ENG1201 = new vis.DataSet([
+    { id: 34, label: "DI10107" },
+    { id: 35, label: "ST10107" },
+    { id: 36, label: "EE10106" },
+    { id: 37, label: "EE10107" },
+    { id: 38, label: "SU10100" },
+    { id: 39, label: "CS10100" },
+    { id: 40, label: "CS10101" },
+    { id: 41, label: "CS10102" },
+    { id: 42, label: "CS10103" }
+
+  ])
+
+
 
   var edges = new vis.DataSet([
      ]);
