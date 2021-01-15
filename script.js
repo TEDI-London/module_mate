@@ -13,11 +13,11 @@ $("document").ready(function(){
   ]);
 
   var ENG1102= new vis.DataSet([
-  { id: 1, label: "test1" },
-  { id: 2, label: "test2" },
-  { id: 3, label: "test3" },
-  { id: 4, label: "test4" },
-  { id: 5, label: "test5" },
+  { id: 6, label: "test1" },
+  { id: 7, label: "test2" },
+  { id: 8, label: "test3" },
+  { id: 9, label: "test4" },
+  { id: 10, label: "test5" },
   ]);
 
   var edges = new vis.DataSet([
