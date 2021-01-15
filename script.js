@@ -21,7 +21,19 @@ $("document").ready(function(){
     nodes: moduleOneNodes,
     edges: edges,
   };
-  var options = {};
+  var options = {
+    physics:{
+      enabled: false
+    },
+    manipulation:{
+      enabled:true,
+      addNode: true,
+      addEdge: true,
+      editEdge: true,
+      deleteNode: true,
+      deleteEdge: true
+    }
+  };
   var network = new vis.Network(container, data, options);
 
 
