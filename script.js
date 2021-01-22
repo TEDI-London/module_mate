@@ -1,7 +1,18 @@
 $("document").ready(function(){
 
+var mods = ["Yo","Yoo","Yooo"];
 
-  //Sample Data
+mods.forEach((item) => {
+  console.log(item)
+})
+
+  //Pull List of Modules
+  $.ajax({url: "modules.json", success: function(result){
+   result.forEach((item) =>{
+     $("#modules").append("<option value=\""+item.Module_ID+"\" id=\""+item.Module_ID+"\">"+item.Module_Title+"</option>")
+     console.log(item.Module_Title)
+   })
+ }});
 
   // create an array with nodes
   var ENG1101 = new vis.DataSet([
@@ -60,11 +71,18 @@ $("document").ready(function(){
 
   // create a network
   var container = document.getElementById("mynetwork");
-  var data = {
-    nodes: ENG1101,
-    edges: edges,
-  };
+  //var data = {
+  //  nodes: ENG1101,
+  //  edges: edges,
+//  };
+
+  function getMapHeight() {
+    return (window.innerHeight - 120);
+
+  }
+
   var options = {
+    height: getMapHeight() + "px",
     physics:{
       enabled: true
     },
@@ -79,6 +97,7 @@ $("document").ready(function(){
   };
 
 
+/*
   //If you select the module button, display the module drop down
   $("#module").on('click', (e) =>{ $("#dropmenu").show();})
 
@@ -89,7 +108,11 @@ $("document").ready(function(){
         $( "#dropmenu" ).slideUp("medium",function(){})
       }
   });
+*/
+  //What we need to do is get a list of these values
+  // For each
 
+/*
   $("#ENG1102").on('click',(e) => {
     var data = {
       nodes: ENG1102,
@@ -99,7 +122,8 @@ $("document").ready(function(){
       var network = new vis.Network(container, data, options);
 
   })
-
+*/
+/*
   $("#ENG1101").on('click',(e) => {
     var data = {
       nodes: ENG1101,
@@ -108,8 +132,9 @@ $("document").ready(function(){
 
       var network = new vis.Network(container, data, options);
 
-  })
+  }) */
 
+/*
   $("#ENG1201").on('click',(e) => {
     var data = {
       nodes: ENG1201,
@@ -119,8 +144,52 @@ $("document").ready(function(){
       var network = new vis.Network(container, data, options);
 
   })
+*/
+  //var network = new vis.Network(container, data, options);
 
-  var network = new vis.Network(container, data, options);
+  var nodeCounter = 0;
+
+
+  $("#modules").on('change',function(){
+    console.log(this.value);
+    const current = this.value
+    //on change we should pull these nodes.
+    //then we can worry about displaying them.
+    $.ajax({url: "nodes.json", success: function(result){
+      console.log(result)
+
+      const liveNodes = result.filter(node => node.Module == current)
+
+      console.log(liveNodes)
+      //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
+
+      //Create a new dataset
+
+      let currentnodes = new vis.DataSet();
+      console.log(typeof(liveNodes))
+
+      //Then for each of the life nodes, current nodes.add
+
+      liveNodes.forEach(function(node){
+        nodeCounter = nodeCounter + 1;
+        currentnodes.add([{id:nodeCounter, label:node.Node_Title, shape:"dot"}])
+      })
+
+      var data = {
+        nodes: currentnodes,
+        edges: edges,
+      };
+
+        var network = new vis.Network(container, data, options);
+
+
+
+
+    }});
+
+  })
+
+
 
 
 })
