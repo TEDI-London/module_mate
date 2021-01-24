@@ -117,3 +117,60 @@ cursor:pointer;}
 select{
   width: 90%;
 }
+
+#save{
+  background-color: #f0d700;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  cursor:pointer;
+
+}
+
+#import{
+  background-color: #f0d700;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  cursor:pointer;
+
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor:pointer;
+  background-color: white !important;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  width: 70%;
+  background: url("https://img.icons8.com/metro/26/000000/expand-arrow.png") 96% / 7% no-repeat #eee;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: 5px;
+
+}
+
+select option{
+
+  background-color: white;
+
+}
