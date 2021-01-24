@@ -123,5 +123,16 @@ $("document").ready(function(){
 
 
 
+    //Set the check to uncheck when you check the other
+    setCore = document.getElementById("setCore");
+    setOptional = document.getElementById("setOptional");
+
+    setCore.onchange = function(){
+      setOptional.checked=false
+    }
+
+    setOptional.onchange = function(){
+      setCore.checked= false
+    }
 
 })
