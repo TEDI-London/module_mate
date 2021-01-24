@@ -21,6 +21,21 @@ $("document").ready(function(){
    })
  }});
 
+ //pull list of nodes add to modal
+ $.ajax({url: "nodes.json", success: function(result){
+  result.forEach((item) =>{
+    let newRow = "";
+    let rowID = "row_" + item.Code;
+    newRow = newRow + "<tr><td> <div class=\"custom-control custom-checkbox\"><input type=\"checkbox\" class=\"custom-control-input\" id=\""+ rowID + "\"><label class=\"custom-control-label\" \"></label></div></td>";
+    newRow = newRow + "<td>" + item.Node_Title + "</td>";
+    newRow = newRow + "<td>" + item.Code + "</td>";
+    newRow = newRow + "<td>" + item.Branch + "</td>";
+    newRow = newRow + "<td>" + item.Module + "</td></tr>";
+
+    $("#nodeTable").append(newRow)
+  })
+  }});
+
 
 
   var edges = new vis.DataSet([
