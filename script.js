@@ -59,48 +59,41 @@ $("document").ready(function(){
   var liveNodes;
   var displayedNodes;
   var network;
+  var currentModule;
 
   $("#modules").on('change',function(){
     console.log(this.value);
-    const current = this.value
+
+    const current = this.value;
+    currentModule = current;
     //on change we should pull these nodes.
     //then we can worry about displaying them.
     $.ajax({url: "nodes.json", success: function(result){
       console.log(result)
-
       liveNodes = result.filter(node => node.Module == current)
       //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
       //Create a new dataset
-
       var currentnodes = new vis.DataSet();
-
       //Then for each of the life nodes, current nodes.add
-
       liveNodes.forEach(function(node){
         nodeCounter = nodeCounter + 1;
         currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700"}])
       })
-
       //perhaps write the code to pull the edges too.
-
       var data = {
         nodes: currentnodes,
         edges: edges,
       };
-
       network = new vis.Network(container, data, options);
-
       displayedNodes = currentnodes;
-    }});
-
-
-
+      }});
   })
 
     $("#save").on('click', function(){
+
       var exportEdges =[{}]
       console.log("clicked!")
-      console.log(liveNodes);
+      console.log(currentModule);
       let file = ""
       liveNodes.forEach(node=>{
 
@@ -120,7 +113,12 @@ $("document").ready(function(){
 
       })
       //write to a file
-        downloadToFile(file,"ModuleExport.csv","text/csv;charset=utf-8");
+      let d = new Date();
+      let month = d.getMonth()+ 1
+      let day = d.getDate();
+      let filename = currentModule + "[" + day + "/" + month + "]";
+
+        downloadToFile(file,filename,"text/csv;charset=utf-8");
     })
 
 
