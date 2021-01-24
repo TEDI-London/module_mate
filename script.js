@@ -63,6 +63,7 @@ $("document").ready(function(){
   var currentnodes = new vis.DataSet();
 
   $("#modules").on('change',function(){
+    currentnodes = new vis.DataSet();
     console.log(this.value);
 
     const current = this.value;

@@ -217,14 +217,14 @@
     "Core": "TRUE"
   },
   {
-    "Node_Title": "Understand in depth the main characteristics of manufacturing processes and their effects on design function, operation, cost etc",
+    "Node_Title": "Manufacturing processes ",
     "Branch": "Engineering Apps",
     "Code": "ME10100",
     "Module": "ENG1301",
     "Core": "TRUE"
   },
   {
-    "Node_Title": "Fabrication and joining methods, automation, CNC machining, additive manufacturing/ 3D printing",
+    "Node_Title": "Fabrication and joining method",
     "Branch": "Engineering Apps",
     "Code": "ME10101",
     "Module": "ENG1301",
@@ -266,7 +266,7 @@
     "Core": "TRUE"
   },
   {
-    "Node_Title": "appreciate the classification of materials including, metals, polymers, ceramics, composites etc",
+    "Node_Title": "classification of materials",
     "Branch": "Engineering Apps",
     "Code": "ME10107",
     "Module": "ENG1301",
