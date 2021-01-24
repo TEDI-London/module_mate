@@ -1,5 +1,17 @@
-$("document").ready(function(){
+const downloadToFile = (content, filename, contentType) => {
+  const a = document.createElement('a');
+  const file = new Blob([content], {type: contentType});
 
+  a.href= URL.createObjectURL(file);
+  a.download = filename;
+  a.click();
+
+	URL.revokeObjectURL(a.href);
+};
+
+
+
+$("document").ready(function(){
 
   //Pull List of Modules
   $.ajax({url: "modules.json", success: function(result){
@@ -41,56 +53,6 @@ $("document").ready(function(){
     }
   };
 
-
-/*
-  //If you select the module button, display the module drop down
-  $("#module").on('click', (e) =>{ $("#dropmenu").show();})
-
-  //If you click anywhere else, hide the module drop down
-  $('html').click(function(e) {
-      if(!$(e.target).hasClass('btn'))
-      {
-        $( "#dropmenu" ).slideUp("medium",function(){})
-      }
-  });
-*/
-  //What we need to do is get a list of these values
-  // For each
-
-/*
-  $("#ENG1102").on('click',(e) => {
-    var data = {
-      nodes: ENG1102,
-      edges: edges,
-    };
-
-      var network = new vis.Network(container, data, options);
-
-  })
-*/
-/*
-  $("#ENG1101").on('click',(e) => {
-    var data = {
-      nodes: ENG1101,
-      edges: edges,
-    };
-
-      var network = new vis.Network(container, data, options);
-
-  }) */
-
-/*
-  $("#ENG1201").on('click',(e) => {
-    var data = {
-      nodes: ENG1201,
-      edges: edges,
-    };
-
-      var network = new vis.Network(container, data, options);
-
-  })
-*/
-  //var network = new vis.Network(container, data, options);
 
   var nodeCounter = 0;
 
@@ -139,18 +101,26 @@ $("document").ready(function(){
       var exportEdges =[{}]
       console.log("clicked!")
       console.log(liveNodes);
+      let file = ""
       liveNodes.forEach(node=>{
 
-        console.log(node.Code)
-        console.log(network.getConnectedNodes(node.Code,"to"));
+        //console.log(node.Code)
+        //console.log(network.getConnectedNodes(node.Code,"to"));
         exportEdges[node.Code] = network.getConnectedNodes(node.Code,"to");
+        let connects = network.getConnectedNodes(node.Code,"to");
+        console.log(node.Code);
+        //Loop through connects.
+        connects.forEach((c) =>{
+
+          console.log(c)
+          console.log("next connection!")
+          file = file + node.Code + "," + c + "\n";
+
+        })
 
       })
-
-      console.log("The export edges are");
-      console.log(exportEdges)
-
       //write to a file
+        downloadToFile(file,"ModuleExport.csv","text/csv;charset=utf-8");
     })
 
 
