@@ -77,7 +77,7 @@ $("document").ready(function(){
       //Then for each of the life nodes, current nodes.add
       liveNodes.forEach(function(node){
         nodeCounter = nodeCounter + 1;
-        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700", core:"true"}])
+        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700", core:node.Core}])
       })
       //perhaps write the code to pull the edges too.
       var data = {
@@ -97,7 +97,8 @@ $("document").ready(function(){
             x=properties.nodes[0];
             let clickedNode = currentnodes.get(x);
             clickedNode.color = "#f0d700";
-            clickedNode.core = "true";
+            clickedNode.core = "TRUE";
+            //node.Core = "TRUE";
             console.log(clickedNode)
             currentnodes.update(clickedNode)
             //if the property was checked
@@ -108,7 +109,7 @@ $("document").ready(function(){
               x=properties.nodes[0];
               let clickedNode = currentnodes.get(x);
               clickedNode.color = "RGB(117,117,117)";
-              clickedNode.core = "false";
+              clickedNode.core = "FALSE";
               console.log(clickedNode)
               currentnodes.update(clickedNode)
 
@@ -125,6 +126,7 @@ $("document").ready(function(){
       console.log("clicked!")
       console.log(currentModule);
       let file = ""
+      let file2 = ""
       liveNodes.forEach(node=>{
 
         //console.log(node.Code)
@@ -132,6 +134,8 @@ $("document").ready(function(){
         exportEdges[node.Code] = network.getConnectedNodes(node.Code,"to");
         let connects = network.getConnectedNodes(node.Code,"to");
         console.log(node.Code);
+        networkNode = currentnodes.get(node.Code);
+        file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "\n"
         //Loop through connects.
         connects.forEach((c) =>{
 
@@ -146,9 +150,11 @@ $("document").ready(function(){
       let d = new Date();
       let month = d.getMonth()+ 1
       let day = d.getDate();
-      let filename = currentModule + "[" + day + "/" + month + "]";
+      let filename = currentModule +"_EE" + "[" + day + "/" + month + "]";
+        let filename2 = currentModule +"_NE" + "[" + day + "/" + month + "]";
 
         downloadToFile(file,filename,"text/csv;charset=utf-8");
+        downloadToFile(file2,filename2,"text/csv;charset=utf-8");
     })
 
 

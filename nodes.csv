@@ -1,47 +1,47 @@
-Node_Title,Branch,Code,Module
-"Health, Safety, Ethics, diversity and inclusion",Professional Skills,PS10100,ENG1101
-Team Working,Professional Skills,PS10101,ENG1101
-Academic Skills,Professional Skills,PS10102,ENG1101
-Introduction to project planning,Professional Skills,PS10103,ENG1101
-Communication and Presentation skills,Professional Skills,PS10104,ENG1101
-The Brief,Design for Innovation,DI10100,ENG1101
-Four questions to ask of every idea,Design for Innovation,DI10101,ENG1101
-Design Ethics,Design for Innovation,DI10102,ENG1101
-Introduction to Engineering Drawing,Design for Innovation,DI10103,ENG1101
-Design Research,Design for Innovation,DI10104,ENG1101
-Biomimicry & Biophilia,Design for Innovation,DI10105,ENG1101
-The Design process,Design for Innovation,DI10106,ENG1101
-Technical versus complex problems,Design for Innovation,DI10107,ENG1201 
-Disruptive Insights,Design for Innovation,DI10108,ENG1101
-Civil Engineering Design Principles,Engineering Apps,ST10100,ENG1101
-Engineering Materials for Construction,Engineering Apps,ST10101,ENG1101
-Introduction to Civil infrastructure_systems,Engineering Apps,ST10102,ENG1101
-Reverse Engineering,Engineering Apps,ST10103,ENG1102 
-Engineering materials,Engineering Apps,ST10104,ENG1102 
-Manufacturing processes,Engineering Apps,ST10105,ENG1102 
-Fluid Mechanics,Engineering Apps,ST10106,ENG1102 
-Civil Engineering and Construction,Engineering Apps,ST10107,ENG1201 
-Basic Electrical Circuits,Engineering Apps,EE10101,ENG1102 
-Resistive Circuits,Engineering Apps,EE10102,ENG1102 
-Equivalent Circuits and Power Transfer,Engineering Apps,EE10103,ENG1102 
-Passive Components,Engineering Apps,EE10104,ENG1102 
-The Amplifier,Engineering Apps,EE10105,ENG1102 
-Power Systems for Smart Cities,Engineering Apps,EE10106,ENG1201 
-Electronic Data for Smart City Infrastructures ,Engineering Apps,EE10107,ENG1201 
-Sensors,Engineering Apps,EE10108,ENG1202 
-Control,Engineering Apps,EE10109,ENG1202 
-"Understand in depth the main characteristics of manufacturing processes and their effects on design function, operation, cost etc",Engineering Apps,ME10100,ENG1301
-"Fabrication and joining methods, automation, CNC machining, additive manufacturing/ 3D printing",Engineering Apps,ME10101,ENG1301
-Design for manufacturing prototypes,Engineering Apps,ME10102,ENG1301
-Thermodynamics and Heat Transfer,Engineering Apps,ME10103,ENG1102 
-Statics,Engineering Apps,ME10104,ENG1102 
-Kinematics,Engineering Apps,ME10105,ENG1102 
-Kinetics,Engineering Apps,ME10106,ENG1102 
-"appreciate the classification of materials including, metals, polymers, ceramics, composites etc",Engineering Apps,ME10107,ENG1301
-Characteristics and properties of a variety of materials,Engineering Apps,ME10108,ENG1301
-Costing,Business Skills,BS10100,ENG1102 
-Sustainability and Engineering Applications,Sustainability,SU10100,ENG1201 
-Smart technologies,Computing,CS10100,ENG1201 
-Smart Urban Planning and Development,Computing,CS10101,ENG1201 
-Designing for Smart Cities,Computing,CS10102,ENG1201 
-Computing Fundamentals for Smart Cities,Computing,CS10103,ENG1201 
+Node_Title,Branch,Code,Module,Core
+"Health, Safety, Ethics, diversity and inclusion",Professional Skills,PS10100,ENG1101,TRUE
+Team Working,Professional Skills,PS10101,ENG1101,TRUE
+Academic Skills,Professional Skills,PS10102,ENG1101,TRUE
+Introduction to project planning,Professional Skills,PS10103,ENG1101,TRUE
+Communication and Presentation skills,Professional Skills,PS10104,ENG1101,TRUE
+The Brief,Design for Innovation,DI10100,ENG1101,TRUE
+Four questions to ask of every idea,Design for Innovation,DI10101,ENG1101,TRUE
+Design Ethics,Design for Innovation,DI10102,ENG1101,TRUE
+Introduction to Engineering Drawing,Design for Innovation,DI10103,ENG1101,TRUE
+Design Research,Design for Innovation,DI10104,ENG1101,TRUE
+Biomimicry & Biophilia,Design for Innovation,DI10105,ENG1101,TRUE
+The Design process,Design for Innovation,DI10106,ENG1101,TRUE
+Technical versus complex problems,Design for Innovation,DI10107,ENG1201 ,TRUE
+Disruptive Insights,Design for Innovation,DI10108,ENG1101,TRUE
+Civil Engineering Design Principles,Engineering Apps,ST10100,ENG1101,TRUE
+Engineering Materials for Construction,Engineering Apps,ST10101,ENG1101,TRUE
+Introduction to Civil infrastructure_systems,Engineering Apps,ST10102,ENG1101,TRUE
+Reverse Engineering,Engineering Apps,ST10103,ENG1102 ,TRUE
+Engineering materials,Engineering Apps,ST10104,ENG1102 ,TRUE
+Manufacturing processes,Engineering Apps,ST10105,ENG1102 ,TRUE
+Fluid Mechanics,Engineering Apps,ST10106,ENG1102 ,TRUE
+Civil Engineering and Construction,Engineering Apps,ST10107,ENG1201 ,TRUE
+Basic Electrical Circuits,Engineering Apps,EE10101,ENG1102 ,TRUE
+Resistive Circuits,Engineering Apps,EE10102,ENG1102 ,TRUE
+Equivalent Circuits and Power Transfer,Engineering Apps,EE10103,ENG1102 ,TRUE
+Passive Components,Engineering Apps,EE10104,ENG1102 ,TRUE
+The Amplifier,Engineering Apps,EE10105,ENG1102 ,TRUE
+Power Systems for Smart Cities,Engineering Apps,EE10106,ENG1201 ,TRUE
+Electronic Data for Smart City Infrastructures ,Engineering Apps,EE10107,ENG1201 ,TRUE
+Sensors,Engineering Apps,EE10108,ENG1202 ,TRUE
+Control,Engineering Apps,EE10109,ENG1202 ,TRUE
+"Understand in depth the main characteristics of manufacturing processes and their effects on design function, operation, cost etc",Engineering Apps,ME10100,ENG1301,TRUE
+"Fabrication and joining methods, automation, CNC machining, additive manufacturing/ 3D printing",Engineering Apps,ME10101,ENG1301,TRUE
+Design for manufacturing prototypes,Engineering Apps,ME10102,ENG1301,TRUE
+Thermodynamics and Heat Transfer,Engineering Apps,ME10103,ENG1102 ,TRUE
+Statics,Engineering Apps,ME10104,ENG1102 ,TRUE
+Kinematics,Engineering Apps,ME10105,ENG1102 ,TRUE
+Kinetics,Engineering Apps,ME10106,ENG1102 ,TRUE
+"appreciate the classification of materials including, metals, polymers, ceramics, composites etc",Engineering Apps,ME10107,ENG1301,TRUE
+Characteristics and properties of a variety of materials,Engineering Apps,ME10108,ENG1301,TRUE
+Costing,Business Skills,BS10100,ENG1102 ,TRUE
+Sustainability and Engineering Applications,Sustainability,SU10100,ENG1201 ,TRUE
+Smart technologies,Computing,CS10100,ENG1201 ,TRUE
+Smart Urban Planning and Development,Computing,CS10101,ENG1201 ,TRUE
+Designing for Smart Cities,Computing,CS10102,ENG1201 ,TRUE
+Computing Fundamentals for Smart Cities,Computing,CS10103,ENG1201 ,TRUE
