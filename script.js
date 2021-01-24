@@ -60,6 +60,7 @@ $("document").ready(function(){
   var displayedNodes;
   var network;
   var currentModule;
+  var currentnodes = new vis.DataSet();
 
   $("#modules").on('change',function(){
     console.log(this.value);
@@ -73,11 +74,10 @@ $("document").ready(function(){
       liveNodes = result.filter(node => node.Module == current)
       //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
       //Create a new dataset
-      var currentnodes = new vis.DataSet();
       //Then for each of the life nodes, current nodes.add
       liveNodes.forEach(function(node){
         nodeCounter = nodeCounter + 1;
-        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700"}])
+        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700", core:"true"}])
       })
       //perhaps write the code to pull the edges too.
       var data = {
@@ -86,6 +86,36 @@ $("document").ready(function(){
       };
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
+
+      setCore = document.getElementById("setCore");
+      setOptional = document.getElementById("setOptional");
+
+      network.on('click',function(properties){
+        if(properties.nodes.length > 0){
+          if(setCore.checked == true){
+            console.log("Set Core")
+            x=properties.nodes[0];
+            let clickedNode = currentnodes.get(x);
+            clickedNode.color = "#f0d700";
+            clickedNode.core = "true";
+            console.log(clickedNode)
+            currentnodes.update(clickedNode)
+            //if the property was checked
+          }
+          else{
+            if(setOptional.checked == true){
+              console.log("Set Optional")
+              x=properties.nodes[0];
+              let clickedNode = currentnodes.get(x);
+              clickedNode.color = "RGB(117,117,117)";
+              clickedNode.core = "false";
+              console.log(clickedNode)
+              currentnodes.update(clickedNode)
+
+            }
+          //alert("Nothing selected")
+        }
+      }})
       }});
   })
 
@@ -134,5 +164,7 @@ $("document").ready(function(){
     setOptional.onchange = function(){
       setCore.checked= false
     }
+
+
 
 })
