@@ -13,6 +13,9 @@ const downloadToFile = (content, filename, contentType) => {
 
 $("document").ready(function(){
 
+  //Variable to keep track of all the row ID's
+  var rowIDs = [];
+
   //Pull List of Modules
   $.ajax({url: "modules.json", success: function(result){
    result.forEach((item) =>{
@@ -26,6 +29,7 @@ $("document").ready(function(){
   result.forEach((item) =>{
     let newRow = "";
     let rowID = "row_" + item.Code;
+    rowIDs.push(rowID)
     newRow = newRow + "<tr><td> <div class=\"custom-control custom-checkbox\"><input type=\"checkbox\" class=\"custom-control-input\" id=\""+ rowID + "\"><label class=\"custom-control-label\" \"></label></div></td>";
     newRow = newRow + "<td>" + item.Node_Title + "</td>";
     newRow = newRow + "<td>" + item.Code + "</td>";
@@ -36,6 +40,11 @@ $("document").ready(function(){
   })
   }});
 
+  $( "#target" ).click(function() {
+    //Get a list of all the checked boxes.
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  });
 
 
   var edges = new vis.DataSet([
