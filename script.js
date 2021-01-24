@@ -40,11 +40,6 @@ $("document").ready(function(){
   })
   }});
 
-  $( "#target" ).click(function() {
-    //Get a list of all the checked boxes.
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-  });
 
 
   var edges = new vis.DataSet([
@@ -144,6 +139,29 @@ $("document").ready(function(){
       }})
       }});
   })
+
+  $( "#target" ).click(function() {
+    //Get a list of all the checked boxes.
+    rowIDs.forEach((i) => {
+      let curr = document.getElementById(i);
+      if(curr.checked){
+        console.log("Import " + i.slice(4,11))
+        let n = i.slice(4,11)
+        currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE"}])
+      }
+      var data = {
+        nodes: currentnodes,
+        edges: edges,
+      };
+      network = new vis.Network(container, data, options);
+      displayedNodes = currentnodes;
+
+    });
+
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+
+  });
 
     $("#save").on('click', function(){
 
