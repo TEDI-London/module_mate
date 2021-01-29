@@ -41,10 +41,6 @@ $("document").ready(function(){
   }});
 
 
-
-  var edges = new vis.DataSet([
-     ]);
-
   // create a network
   var container = document.getElementById("mynetwork");
   //var data = {
@@ -60,7 +56,8 @@ $("document").ready(function(){
   var options = {
     height: getMapHeight() + "px",
     physics:{
-      enabled: true
+      enabled: true,
+      maxVelocity: 3
     },
     manipulation:{
       enabled:true,
@@ -80,15 +77,17 @@ $("document").ready(function(){
   var network;
   var currentModule;
   var currentnodes = new vis.DataSet();
+  var edges = new vis.DataSet([]);
+
 
   $("#modules").on('change',function(){
     currentnodes = new vis.DataSet();
+    edges = new vis.DataSet([]);
     console.log(this.value);
 
     const current = this.value;
     currentModule = current;
-    //on change we should pull these nodes.
-    //then we can worry about displaying them.
+    //Pull the list of nodes
     $.ajax({url: "nodes.json", success: function(result){
       console.log(result)
       liveNodes = result.filter(node => node.Module == current)
@@ -99,6 +98,36 @@ $("document").ready(function(){
         nodeCounter = nodeCounter + 1;
         currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700", core:node.Core}])
       })
+      }});
+
+
+      //pull the edges for the current module
+      $.ajax({url: "edges.json", success: function(result){
+
+        liveEdges = result.filter(node => node.module == current)
+
+        liveEdges.forEach((item) => {
+          for (var key of Object.keys(item)) {
+            if(key == "module"){
+              continue;
+            }
+            console.log(typeof(item[key]))
+            if(typeof(item[key]) == 'object'){
+              let nodelist = item[key]
+              nodelist.forEach((n)=>{
+                edges.add([{from:key,to:n}])
+              })
+            }
+            else{
+              edgepair = `{from: ${key}, to: ${item[key]}}`
+              edges.add([{from:key,to:item[key]}])
+            }
+
+          }
+        });
+
+      }});
+
       //perhaps write the code to pull the edges too.
       var data = {
         nodes: currentnodes,
@@ -136,9 +165,8 @@ $("document").ready(function(){
             }
           //alert("Nothing selected")
         }
-      }})
       }});
-  })
+  });
 
   $( "#target" ).click(function() {
     //Get a list of all the checked boxes.
