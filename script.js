@@ -28,7 +28,7 @@ $("document").ready(function(){
  $.ajax({url: "nodes.json", success: function(result){
   result.forEach((item) =>{
     let newRow = "";
-    let rowID = "row_" + item.Code;
+    let rowID = "row_" + item.Code + "_" + item.Node_Title;
     rowIDs.push(rowID)
     newRow = newRow + "<tr><td> <div class=\"custom-control custom-checkbox\"><input type=\"checkbox\" class=\"custom-control-input\" id=\""+ rowID + "\"><label class=\"custom-control-label\" \"></label></div></td>";
     newRow = newRow + "<td>" + item.Node_Title + "</td>";
@@ -170,12 +170,16 @@ $("document").ready(function(){
 
   $( "#target" ).click(function() {
     //Get a list of all the checked boxes.
+    currentnodes = new vis.DataSet();
+    edges = new vis.DataSet([]);
+
     rowIDs.forEach((i) => {
       let curr = document.getElementById(i);
       if(curr.checked){
-        console.log("Import " + i.slice(4,11))
+        console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
         let n = i.slice(4,11)
-        currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE"}])
+        let t = i.slice(12,)
+        currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
       }
       var data = {
         nodes: currentnodes,
