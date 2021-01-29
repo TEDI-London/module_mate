@@ -175,11 +175,15 @@ $("document").ready(function(){
 
     rowIDs.forEach((i) => {
       let curr = document.getElementById(i);
+      console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
+      let n = i.slice(4,11)
+      let t = i.slice(12,)
       if(curr.checked){
-        console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
-        let n = i.slice(4,11)
-        let t = i.slice(12,)
         currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
+      }
+      else{
+        currentnodes.remove([{id:n}])
+
       }
       var data = {
         nodes: currentnodes,
