@@ -215,6 +215,22 @@ select{
   cursor:pointer;
 
 }
+
+#upload{
+  background-color: #f0d700;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  cursor:pointer;
+
+}
 .top_module{
   height:30px;
   margin-right: 30px;

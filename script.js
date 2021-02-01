@@ -180,6 +180,7 @@ $("document").ready(function(){
       let t = i.slice(12,)
       if(curr.checked){
         currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
+        //liveNodes.push({"Node_Title":t})
       }
       else{
         currentnodes.remove([{id:n}])
@@ -202,8 +203,6 @@ $("document").ready(function(){
     $("#save").on('click', function(){
 
       var exportEdges =[{}]
-      console.log("clicked!")
-      console.log(currentModule);
       let file = ""
       let file2 = ""
       liveNodes.forEach(node=>{
@@ -230,11 +229,33 @@ $("document").ready(function(){
       let month = d.getMonth()+ 1
       let day = d.getDate();
       let filename = currentModule +"_EE" + "[" + day + "/" + month + "]";
-        let filename2 = currentModule +"_NE" + "[" + day + "/" + month + "]";
+      let filename2 = currentModule +"_NE" + "[" + day + "/" + month + "]";
 
-        downloadToFile(file,filename,"text/csv;charset=utf-8");
-        downloadToFile(file2,filename2,"text/csv;charset=utf-8");
+      downloadToFile(file,filename,"text/csv;charset=utf-8");
+      downloadToFile(file2,filename2,"text/csv;charset=utf-8");
     })
+
+    //Pull uploaded files
+    $("#getFile").change(function() {
+      //Pull the file from Client side, create a reader to read it.
+      filename = this.files[0]
+      let reader = new FileReader();
+      reader.readAsText(filename)
+      reader.onload = function() {
+        //Convert CSV file to an array of strings.
+        let array = reader.result.split("\n");
+        //For each row in the array, pull the title ID and corevalue.
+        array.forEach((i)=>{
+          let elements = i.split(",");
+          let title = elements[0];
+          let id = elements[1];
+          let corevalue = elements[2];
+          console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
+        })
+
+      };
+
+    });
 
 
 
