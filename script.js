@@ -228,8 +228,8 @@ $("document").ready(function(){
       let d = new Date();
       let month = d.getMonth()+ 1
       let day = d.getDate();
-      let filename = currentModule +"_EE" + "[" + day + "/" + month + "]";
-      let filename2 = currentModule +"_NE" + "[" + day + "/" + month + "]";
+      let filename = currentModule +"_EDGES" + "[" + day + "/" + month + "]";
+      let filename2 = currentModule +"_NODES" + "[" + day + "/" + month + "]";
 
       downloadToFile(file,filename,"text/csv;charset=utf-8");
       downloadToFile(file2,filename2,"text/csv;charset=utf-8");
@@ -272,7 +272,41 @@ $("document").ready(function(){
 
     });
 
+    $("#getFile2").change(function(){
+      edges = new vis.DataSet([]);
+      let filename = this.files[0]
+      let reader = new FileReader();
+      reader.readAsText(filename);
+      reader.onload = function() {
+      console.log(reader.result);
+      let array = reader.result.split("\n");
 
+      array.forEach((item) => {
+        if(item){
+          console.log("NewEdge")
+          console.log(item)
+          let elements = item.split(",");
+          let to = elements[0];
+          let from = elements[1];
+
+          let edgepair = `{from: ${from}, to: ${to}}`;
+          console.log(edgepair)
+          edges.add([{from:from,to:to}])
+
+        }
+      });
+
+
+      }
+
+      var data = {
+        nodes: currentnodes,
+        edges: edges,
+      };
+      network = new vis.Network(container, data, options);
+      displayedNodes = currentnodes;
+
+    })
 
     //Set the check to uncheck when you check the other
     setCore = document.getElementById("setCore");
