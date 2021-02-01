@@ -336,7 +336,7 @@ $("document").ready(function(){
           liveNodes[count]=data;
           colour = getColour(corevalue)
           //console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
-          currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:"TRUE"}])
+          currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:corevalue}])
 
         })
 
