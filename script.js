@@ -9,6 +9,15 @@ const downloadToFile = (content, filename, contentType) => {
 	URL.revokeObjectURL(a.href);
 };
 
+function getColour(corevalue){
+  if(corevalue == "TRUE"){
+    return "#f0d700"
+  }
+  else{
+    return "RGB(117,117,117)"
+  }
+}
+
 function setOpt(properties,currentnodes){
 
   if(properties.nodes.length > 0){
@@ -127,7 +136,8 @@ $("document").ready(function(){
       //Then for each of the life nodes, current nodes.add
       liveNodes.forEach(function(node){
         nodeCounter = nodeCounter + 1;
-        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:"#f0d700", core:node.Core}])
+        colour = getColour(node.Core);
+        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:colour, core:node.Core}])
       })
       }});
 
@@ -199,7 +209,7 @@ $("document").ready(function(){
         }
       }});
   });
-
+  //The import nodes button
   $( "#target" ).click(function() {
     //Get a list of all the checked boxes.
     currentnodes = new vis.DataSet();
@@ -324,8 +334,9 @@ $("document").ready(function(){
           }
 
           liveNodes[count]=data;
+          colour = getColour(corevalue)
           //console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
-          currentnodes.add([{id:id, label:title, shape:"dot", color:"#f0d700", core:"TRUE"}])
+          currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:"TRUE"}])
 
         })
 
