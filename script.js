@@ -9,9 +9,36 @@ const downloadToFile = (content, filename, contentType) => {
 	URL.revokeObjectURL(a.href);
 };
 
+function setOpt(properties,currentnodes){
+
+  if(properties.nodes.length > 0){
+    if(setCore.checked == true){
+      console.log("here")
+      x=properties.nodes[0];
+      let clickedNode = currentnodes.get(x);
+      clickedNode.color = "#f0d700";
+      clickedNode.core = "TRUE";
+      console.log(clickedNode)
+      currentnodes.update(clickedNode)
+    }
+    else{
+      if(setOptional.checked == true){
+        console.log("there")
+        x=properties.nodes[0];
+        let clickedNode = currentnodes.get(x);
+        clickedNode.color = "RGB(117,117,117)";
+        clickedNode.core = "FALSE";
+        currentnodes.update(clickedNode)
+      }
+    }
+
+  }
+}
+
 
 
 $("document").ready(function(){
+
 
   //Variable to keep track of all the row ID's
   var rowIDs = [];
@@ -20,9 +47,10 @@ $("document").ready(function(){
   $.ajax({url: "modules.json", success: function(result){
    result.forEach((item) =>{
      $("#modules").append("<option value=\""+item.Module_ID+"\" id=\""+item.Module_ID+"\">"+item.Module_Title+"</option>")
-     console.log(item.Module_Title)
+     //console.log(item.Module_Title)
    })
  }});
+
 
  //pull list of nodes add to modal
  $.ajax({url: "nodes.json", success: function(result){
@@ -83,17 +111,17 @@ $("document").ready(function(){
   $("#modules").on('change',function(){
     currentnodes = new vis.DataSet();
     edges = new vis.DataSet([]);
-    console.log(this.value);
+    //console.log(this.value);
 
     const current = this.value;
     currentModule = current;
     //Pull the list of nodes
     $.ajax({url: "nodes.json", success: function(result){
-      console.log(result)
+      //console.log(result)
       liveNodes = result.filter(node => node.Module == current)
-      console.log("The liveNodes are")
-      console.log(typeof(liveNodes))
-      console.log(liveNodes)
+      //console.log("The liveNodes are")
+      //console.log(typeof(liveNodes))
+      //console.log(liveNodes)
       //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
       //Create a new dataset
       //Then for each of the life nodes, current nodes.add
@@ -114,7 +142,7 @@ $("document").ready(function(){
             if(key == "module"){
               continue;
             }
-            console.log(typeof(item[key]))
+            //console.log(typeof(item[key]))
             if(typeof(item[key]) == 'object'){
               let nodelist = item[key]
               nodelist.forEach((n)=>{
@@ -143,6 +171,7 @@ $("document").ready(function(){
       setOptional = document.getElementById("setOptional");
 
       network.on('click',function(properties){
+        console.log("Clicked on the network")
         if(properties.nodes.length > 0){
           if(setCore.checked == true){
             console.log("Set Core")
@@ -181,7 +210,7 @@ $("document").ready(function(){
     rowIDs.forEach((i) => {
       //let d = {}
       let curr = document.getElementById(i);
-      console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
+      //console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
       let n = i.slice(4,11)
       let t = i.slice(12,)
       //d["Node_Title"] = t;
@@ -204,8 +233,8 @@ $("document").ready(function(){
         currentnodes.remove([{id:n}])
 
       }
-      console.log("The live nodes are now ")
-      console.log(liveNodes)
+      //console.log("The live nodes are now ")
+      //console.log(liveNodes)
 
       var data = {
         nodes: currentnodes,
@@ -213,6 +242,11 @@ $("document").ready(function(){
       };
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
+
+      network.on('click', function(properties){
+        setOpt(properties,currentnodes);
+      })
+      //network.on('click',setOptional("hello"));
 
     });
 
@@ -232,14 +266,14 @@ $("document").ready(function(){
         //console.log(network.getConnectedNodes(node.Code,"to"));
         exportEdges[node.Code] = network.getConnectedNodes(node.Code,"to");
         let connects = network.getConnectedNodes(node.Code,"to");
-        console.log(node.Code);
+        //console.log(node.Code);
         networkNode = currentnodes.get(node.Code);
         file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "\n"
         //Loop through connects.
         connects.forEach((c) =>{
 
-          console.log(c)
-          console.log("next connection!")
+          //console.log(c)
+          //console.log("next connection!")
           file = file + node.Code + "," + c + "\n";
 
         })
@@ -290,13 +324,13 @@ $("document").ready(function(){
           }
 
           liveNodes[count]=data;
-          console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
+          //console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
           currentnodes.add([{id:id, label:title, shape:"dot", color:"#f0d700", core:"TRUE"}])
 
         })
 
-        console.log("The live nodes are")
-        console.log(liveNodes)
+        //console.log("The live nodes are")
+        //console.log(liveNodes)
 
       };
 
@@ -307,6 +341,12 @@ $("document").ready(function(){
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
 
+
+      network.on('click', function(properties){
+          setOpt(properties,currentnodes);
+        })
+
+
     });
 
     $("#getFile2").change(function(){
@@ -315,19 +355,19 @@ $("document").ready(function(){
       let reader = new FileReader();
       reader.readAsText(filename);
       reader.onload = function() {
-      console.log(reader.result);
+      //console.log(reader.result);
       let array = reader.result.split("\n");
 
       array.forEach((item) => {
         if(item){
-          console.log("NewEdge")
-          console.log(item)
+          //console.log("NewEdge")
+          //console.log(item)
           let elements = item.split(",");
           let to = elements[0];
           let from = elements[1];
 
           let edgepair = `{from: ${from}, to: ${to}}`;
-          console.log(edgepair)
+          //console.log(edgepair)
           edges.add([{from:from,to:to}])
 
         }
@@ -340,8 +380,14 @@ $("document").ready(function(){
         nodes: currentnodes,
         edges: edges,
       };
+
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
+
+
+      network.on('click', function(properties){
+            setOpt(properties,currentnodes);
+      })
 
     })
 
@@ -383,6 +429,7 @@ $("document").ready(function(){
         modal.style.display = "none";
       }
     }
+
 
 
 })
