@@ -98,10 +98,10 @@ $("document").ready(function(){
     },
     manipulation:{
       enabled:true,
-      addNode: true,
+      addNode: false,
       addEdge: true,
       editEdge: true,
-      deleteNode: true,
+      deleteNode: false,
       deleteEdge: true
     }
   };
@@ -112,7 +112,7 @@ $("document").ready(function(){
   var liveNodes;
   var displayedNodes;
   var network;
-  var currentModule;
+  var currentModule ="CUSTOM_";
   var currentnodes = new vis.DataSet();
   var edges = new vis.DataSet([]);
 
