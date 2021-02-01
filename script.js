@@ -91,6 +91,9 @@ $("document").ready(function(){
     $.ajax({url: "nodes.json", success: function(result){
       console.log(result)
       liveNodes = result.filter(node => node.Module == current)
+      console.log("The liveNodes are")
+      console.log(typeof(liveNodes))
+      console.log(liveNodes)
       //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
       //Create a new dataset
       //Then for each of the life nodes, current nodes.add
@@ -173,19 +176,37 @@ $("document").ready(function(){
     currentnodes = new vis.DataSet();
     edges = new vis.DataSet([]);
 
+    liveNodes = [];
+    let count = 0;
     rowIDs.forEach((i) => {
+      //let d = {}
       let curr = document.getElementById(i);
       console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
       let n = i.slice(4,11)
       let t = i.slice(12,)
+      //d["Node_Title"] = t;
+      //d["Code"] = n;
+      //d["Core"]= "TRUE";
+      //liveNodes[count]=data;
       if(curr.checked){
+        count = count + 1;
         currentnodes.add([{id:n,shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
         //liveNodes.push({"Node_Title":t})
+        let d = {}
+        d["Node_Title"] = t;
+        d["Code"] = n;
+        d["Core"]= "TRUE";
+        liveNodes[count]=d;
+
+
       }
       else{
         currentnodes.remove([{id:n}])
 
       }
+      console.log("The live nodes are now ")
+      console.log(liveNodes)
+
       var data = {
         nodes: currentnodes,
         edges: edges,
@@ -243,6 +264,8 @@ $("document").ready(function(){
       currentnodes = new vis.DataSet();
       edges = new vis.DataSet([]);
 
+      liveNodes = [];
+
 
       filename = this.files[0]
       let reader = new FileReader();
@@ -251,15 +274,29 @@ $("document").ready(function(){
         //Convert CSV file to an array of strings.
         let array = reader.result.split("\n");
         //For each row in the array, pull the title ID and corevalue.
-        array.forEach((i)=>{
+        array.forEach((i, count)=>{
+
+          let data = {}
           let elements = i.split(",");
           let title = elements[0];
           let id = elements[1];
           let corevalue = elements[2];
+          data["Node_Title"] = title;
+          data["Code"] = id;
+          data["Core"]= corevalue;
+
+          if(!title){
+            return;
+          }
+
+          liveNodes[count]=data;
           console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
           currentnodes.add([{id:id, label:title, shape:"dot", color:"#f0d700", core:"TRUE"}])
 
         })
+
+        console.log("The live nodes are")
+        console.log(liveNodes)
 
       };
 
