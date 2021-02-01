@@ -179,7 +179,7 @@ $("document").ready(function(){
       let n = i.slice(4,11)
       let t = i.slice(12,)
       if(curr.checked){
-        currentnodes.add([{id:n, label:n, shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
+        currentnodes.add([{id:n,shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
         //liveNodes.push({"Node_Title":t})
       }
       else{
@@ -238,6 +238,12 @@ $("document").ready(function(){
     //Pull uploaded files
     $("#getFile").change(function() {
       //Pull the file from Client side, create a reader to read it.
+
+      //Empty the current nodes and edges
+      currentnodes = new vis.DataSet();
+      edges = new vis.DataSet([]);
+
+
       filename = this.files[0]
       let reader = new FileReader();
       reader.readAsText(filename)
@@ -251,9 +257,18 @@ $("document").ready(function(){
           let id = elements[1];
           let corevalue = elements[2];
           console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
+          currentnodes.add([{id:id, label:title, shape:"dot", color:"#f0d700", core:"TRUE"}])
+
         })
 
       };
+
+      var data = {
+        nodes: currentnodes,
+        edges: edges,
+      };
+      network = new vis.Network(container, data, options);
+      displayedNodes = currentnodes;
 
     });
 
