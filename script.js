@@ -1,3 +1,4 @@
+//A function that downloads the CSV file client side.
 const downloadToFile = (content, filename, contentType) => {
   const a = document.createElement('a');
   const file = new Blob([content], {type: contentType});
@@ -9,6 +10,8 @@ const downloadToFile = (content, filename, contentType) => {
 	URL.revokeObjectURL(a.href);
 };
 
+//A function that returns the appropriate node colour depending on whether it is
+//core or optional
 function getColour(corevalue){
   if(corevalue == "TRUE"){
     return "#f0d700"
@@ -18,23 +21,35 @@ function getColour(corevalue){
   }
 }
 
+//Set Optional
+//Given a network, this function updates core and optional status on click
+//of each node.
 function setOpt(properties,currentnodes){
 
+  //Checks if you've actually clicked on a node.
+  //If this value is 0 then a user hasn't selected a node
+  //They have selected a blank area on the network -- therefore nothing should happen.
   if(properties.nodes.length > 0){
+    //If the set core check box has been ticked.
     if(setCore.checked == true){
-      console.log("here")
+      //Gets the ID of the current node clicked
       x=properties.nodes[0];
+      //Obtains the node object of the clicked node
       let clickedNode = currentnodes.get(x);
+      //Modifes the colour and core fields appropriately
       clickedNode.color = "#f0d700";
       clickedNode.core = "TRUE";
-      console.log(clickedNode)
+      //Updates the list of current nodes with the new node.
       currentnodes.update(clickedNode)
     }
     else{
+      //If core hasn't been selected && set optional is true
       if(setOptional.checked == true){
-        console.log("there")
+        //X is the ID of the clicked node.
         x=properties.nodes[0];
+        //Obtain node object with ID x
         let clickedNode = currentnodes.get(x);
+        //Update properties accordingly.
         clickedNode.color = "RGB(117,117,117)";
         clickedNode.core = "FALSE";
         currentnodes.update(clickedNode)
@@ -54,9 +69,9 @@ $("document").ready(function(){
 
   //Pull List of Modules
   $.ajax({url: "modules.json", success: function(result){
+    //Append each module to the drop down list on the left of the page.
    result.forEach((item) =>{
      $("#modules").append("<option value=\""+item.Module_ID+"\" id=\""+item.Module_ID+"\">"+item.Module_Title+"</option>")
-     //console.log(item.Module_Title)
    })
  }});
 
@@ -67,6 +82,7 @@ $("document").ready(function(){
     let newRow = "";
     let rowID = "row_" + item.Code + "_" + item.Node_Title;
     rowIDs.push(rowID)
+    //Populates information from the nodes into the table
     newRow = newRow + "<tr><td> <div class=\"custom-control custom-checkbox\"><input type=\"checkbox\" class=\"custom-control-input\" id=\""+ rowID + "\"><label class=\"custom-control-label\" \"></label></div></td>";
     newRow = newRow + "<td>" + item.Node_Title + "</td>";
     newRow = newRow + "<td>" + item.Code + "</td>";
@@ -80,16 +96,17 @@ $("document").ready(function(){
 
   // create a network
   var container = document.getElementById("mynetwork");
-  //var data = {
-  //  nodes: ENG1101,
-  //  edges: edges,
-//  };
 
+  // Used to determine the prefered size of the window.
+  //Potential Enhancement: Update this function resize of window?
   function getMapHeight() {
     return (window.innerHeight - 120);
 
   }
-
+  //Define properties and attributes of editor.
+  //MaxVelocity set to 3 to reduce 'spaghetti'
+  //Disabled addNode and Delete node for now as additional code needs to be written
+  //To define this behaviour (i.e. updating the relevant variables)
   var options = {
     height: getMapHeight() + "px",
     physics:{
@@ -108,7 +125,6 @@ $("document").ready(function(){
 
 
   var nodeCounter = 0;
-
   var liveNodes;
   var displayedNodes;
   var network;
@@ -120,17 +136,11 @@ $("document").ready(function(){
   $("#modules").on('change',function(){
     currentnodes = new vis.DataSet();
     edges = new vis.DataSet([]);
-    //console.log(this.value);
-
     const current = this.value;
     currentModule = current;
     //Pull the list of nodes
     $.ajax({url: "nodes.json", success: function(result){
-      //console.log(result)
       liveNodes = result.filter(node => node.Module == current)
-      //console.log("The liveNodes are")
-      //console.log(typeof(liveNodes))
-      //console.log(liveNodes)
       //for each of these nodes we need to append it to the dataset object, or rather create a data set object.
       //Create a new dataset
       //Then for each of the life nodes, current nodes.add
@@ -146,13 +156,11 @@ $("document").ready(function(){
       $.ajax({url: "edges.json", success: function(result){
 
         liveEdges = result.filter(node => node.module == current)
-
         liveEdges.forEach((item) => {
           for (var key of Object.keys(item)) {
             if(key == "module"){
               continue;
             }
-            //console.log(typeof(item[key]))
             if(typeof(item[key]) == 'object'){
               let nodelist = item[key]
               nodelist.forEach((n)=>{
@@ -189,7 +197,6 @@ $("document").ready(function(){
             let clickedNode = currentnodes.get(x);
             clickedNode.color = "#f0d700";
             clickedNode.core = "TRUE";
-            //node.Core = "TRUE";
             console.log(clickedNode)
             currentnodes.update(clickedNode)
             //if the property was checked
@@ -205,10 +212,11 @@ $("document").ready(function(){
               currentnodes.update(clickedNode)
 
             }
-          //alert("Nothing selected")
         }
       }});
   });
+
+
   //The import nodes button
   $( "#target" ).click(function() {
     //Get a list of all the checked boxes.
@@ -218,19 +226,12 @@ $("document").ready(function(){
     liveNodes = [];
     let count = 0;
     rowIDs.forEach((i) => {
-      //let d = {}
       let curr = document.getElementById(i);
-      //console.log("Import " + i.slice(4,11) +" " +i.slice(12,))
       let n = i.slice(4,11)
       let t = i.slice(12,)
-      //d["Node_Title"] = t;
-      //d["Code"] = n;
-      //d["Core"]= "TRUE";
-      //liveNodes[count]=data;
       if(curr.checked){
         count = count + 1;
         currentnodes.add([{id:n,shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
-        //liveNodes.push({"Node_Title":t})
         let d = {}
         d["Node_Title"] = t;
         d["Code"] = n;
@@ -243,8 +244,6 @@ $("document").ready(function(){
         currentnodes.remove([{id:n}])
 
       }
-      //console.log("The live nodes are now ")
-      //console.log(liveNodes)
 
       var data = {
         nodes: currentnodes,
@@ -256,7 +255,6 @@ $("document").ready(function(){
       network.on('click', function(properties){
         setOpt(properties,currentnodes);
       })
-      //network.on('click',setOptional("hello"));
 
     });
 
@@ -272,18 +270,12 @@ $("document").ready(function(){
       let file2 = ""
       liveNodes.forEach(node=>{
 
-        //console.log(node.Code)
-        //console.log(network.getConnectedNodes(node.Code,"to"));
         exportEdges[node.Code] = network.getConnectedNodes(node.Code,"to");
         let connects = network.getConnectedNodes(node.Code,"to");
-        //console.log(node.Code);
         networkNode = currentnodes.get(node.Code);
         file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "\n"
         //Loop through connects.
         connects.forEach((c) =>{
-
-          //console.log(c)
-          //console.log("next connection!")
           file = file + node.Code + "," + c + "\n";
 
         })
@@ -335,13 +327,9 @@ $("document").ready(function(){
 
           liveNodes[count]=data;
           colour = getColour(corevalue)
-          //console.log(`The title is ${title} \n the id is ${id} \n and the core value is ${corevalue}`);
           currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:corevalue}])
 
         })
-
-        //console.log("The live nodes are")
-        //console.log(liveNodes)
 
       };
 
@@ -366,19 +354,15 @@ $("document").ready(function(){
       let reader = new FileReader();
       reader.readAsText(filename);
       reader.onload = function() {
-      //console.log(reader.result);
       let array = reader.result.split("\n");
 
       array.forEach((item) => {
         if(item){
-          //console.log("NewEdge")
-          //console.log(item)
           let elements = item.split(",");
           let to = elements[0];
           let from = elements[1];
 
           let edgepair = `{from: ${from}, to: ${to}}`;
-          //console.log(edgepair)
           edges.add([{from:from,to:to}])
 
         }
@@ -440,7 +424,5 @@ $("document").ready(function(){
         modal.style.display = "none";
       }
     }
-
-
 
 })
