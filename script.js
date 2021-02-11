@@ -1,13 +1,13 @@
 //A function that downloads the CSV file client side.
 const downloadToFile = (content, filename, contentType) => {
-  const a = document.createElement('a');
+  const contentContainer = document.createElement('a');
   const file = new Blob([content], {type: contentType});
 
-  a.href= URL.createObjectURL(file);
-  a.download = filename;
-  a.click();
+  contentContainer.href= URL.createObjectURL(file);
+  contentContainer.download = filename;
+  contentContainer.click();
 
-	URL.revokeObjectURL(a.href);
+	URL.revokeObjectURL(contentContainer.href);
 };
 
 //A function that returns the appropriate node colour depending on whether it is
@@ -62,8 +62,6 @@ function setOpt(properties,currentnodes){
 
 
 $("document").ready(function(){
-
-
   //Variable to keep track of all the row ID's
   var rowIDs = [];
 
@@ -225,23 +223,31 @@ $("document").ready(function(){
 
     liveNodes = [];
     let count = 0;
+
+    //Iterate through the list of nodes that could be imported.
     rowIDs.forEach((i) => {
+      //Pull relevant details
       let curr = document.getElementById(i);
-      let n = i.slice(4,11)
-      let t = i.slice(12,)
+      let node_code = i.slice(4,11)
+      let node_title = i.slice(12,)
       if(curr.checked){
         count = count + 1;
-        currentnodes.add([{id:n,shape:"dot", color:"#f0d700", core:"TRUE", label:t}])
-        let d = {}
-        d["Node_Title"] = t;
-        d["Code"] = n;
-        d["Core"]= "TRUE";
-        liveNodes[count]=d;
-
-
+        currentnodes.add([{id:node_code,shape:"dot", color:"#f0d700", core:"TRUE", label:node_title}])
+        //When the node is added to the network, save it's data in the live nodes
+        //array. This is done because the liveNodes array is the data
+        //that is exported on save.
+        let newNode = {}
+        newNode["Node_Title"] = node_title;
+        newNode["Code"] = node_code;
+        newNode["Core"]= "TRUE";
+        liveNodes[count]=newNode;
       }
+      //Ensure's that unchecked nodes are removed from the network.
       else{
-        currentnodes.remove([{id:n}])
+        currentnodes.remove([{id:node_code}])
+        //TO-DO - Remove from the live nodes array also.
+        //I think you could implement it like this
+        //someArray.filter(function(el) { return el.Code != node_code; });
 
       }
 
@@ -263,10 +269,11 @@ $("document").ready(function(){
 
   });
 
+//Export files on save
     $("#save").on('click', function(){
 
       var exportEdges =[{}]
-      let file = ""
+      let edgeFile = ""
       let file2 = ""
       liveNodes.forEach(node=>{
 
@@ -276,33 +283,28 @@ $("document").ready(function(){
         file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "\n"
         //Loop through connects.
         connects.forEach((c) =>{
-          file = file + node.Code + "," + c + "\n";
-
+          edgeFile = edgeFile + node.Code + "," + c + "\n";
         })
 
       })
       //write to a file
-      let d = new Date();
-      let month = d.getMonth()+ 1
-      let day = d.getDate();
-      let filename = currentModule +"_EDGES" + "[" + day + "/" + month + "]";
-      let filename2 = currentModule +"_NODES" + "[" + day + "/" + month + "]";
+      let currentDate = new Date();
+      let month = currentDate.getMonth()+ 1
+      let day = currentDate.getDate();
+      let edgeFileName = currentModule +"_EDGES" + "[" + day + "/" + month + "]";
+      let nodeFileName = currentModule +"_NODES" + "[" + day + "/" + month + "]";
 
-      downloadToFile(file,filename,"text/csv;charset=utf-8");
-      downloadToFile(file2,filename2,"text/csv;charset=utf-8");
+      downloadToFile(edgeFile,edgeFileName,"text/csv;charset=utf-8");
+      downloadToFile(file2,nodeFileName,"text/csv;charset=utf-8");
     })
 
-    //Pull uploaded files
+//Upload Nodes Button functionality
     $("#getFile").change(function() {
       //Pull the file from Client side, create a reader to read it.
-
       //Empty the current nodes and edges
       currentnodes = new vis.DataSet();
       edges = new vis.DataSet([]);
-
       liveNodes = [];
-
-
       filename = this.files[0]
       let reader = new FileReader();
       reader.readAsText(filename)
@@ -348,6 +350,7 @@ $("document").ready(function(){
 
     });
 
+//Uploaded Edges Button Functionality
     $("#getFile2").change(function(){
       edges = new vis.DataSet([]);
       let filename = this.files[0]
@@ -368,9 +371,7 @@ $("document").ready(function(){
         }
       });
 
-
       }
-
       var data = {
         nodes: currentnodes,
         edges: edges,
@@ -378,7 +379,6 @@ $("document").ready(function(){
 
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
-
 
       network.on('click', function(properties){
             setOpt(properties,currentnodes);
