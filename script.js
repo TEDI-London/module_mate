@@ -300,11 +300,11 @@ $("document").ready(function(){
 
 //Upload Nodes Button functionality
     $("#getFile").change(function() {
-      //Pull the file from Client side, create a reader to read it.
       //Empty the current nodes and edges
       currentnodes = new vis.DataSet();
       edges = new vis.DataSet([]);
       liveNodes = [];
+      //Pull the file from Client side, create a reader to read it.
       filename = this.files[0]
       let reader = new FileReader();
       reader.readAsText(filename)
@@ -323,10 +323,13 @@ $("document").ready(function(){
           data["Code"] = id;
           data["Core"]= corevalue;
 
+          //I can't remember what edge case I was excluding here
+          //I assume there was a blank node coming through?
           if(!title){
             return;
           }
 
+          //Add new node to dataset + network
           liveNodes[count]=data;
           colour = getColour(corevalue)
           currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:corevalue}])
@@ -335,6 +338,7 @@ $("document").ready(function(){
 
       };
 
+      //Refresh Network
       var data = {
         nodes: currentnodes,
         edges: edges,
@@ -342,7 +346,8 @@ $("document").ready(function(){
       network = new vis.Network(container, data, options);
       displayedNodes = currentnodes;
 
-
+      //Since we're creating a new network we need to reimplement
+      // the on click functionality
       network.on('click', function(properties){
           setOpt(properties,currentnodes);
         })
@@ -352,7 +357,9 @@ $("document").ready(function(){
 
 //Uploaded Edges Button Functionality
     $("#getFile2").change(function(){
+      //Empty the current edges
       edges = new vis.DataSet([]);
+      //Pull the file from Client side, create a reader to read it.
       let filename = this.files[0]
       let reader = new FileReader();
       reader.readAsText(filename);
