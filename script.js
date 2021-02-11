@@ -264,8 +264,12 @@ $("document").ready(function(){
 
     });
 
+    //Reset Module Drop Down
+    var module_dropdown = document.getElementById("modules").selectedIndex=0;
+    //Close Modal
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+
 
   });
 
