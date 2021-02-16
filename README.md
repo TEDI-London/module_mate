@@ -19,8 +19,10 @@ moduleCode_EDGES[DATE].csv for the edges file
 The node file is a CSV file of each node and information pertaining to that node, such as it's title, code and optional/core status. 
 The edges file contains a list of each node to node connection. 
 
-her editherssdd
-These files can be re-uploaded into module mate at a later stage (see Upload below) for further edits and review. These files can be sent to IT when they have been approved for addition into the database.  
+These files have several use cases. They can:
+- Be re-uploaded into module mate at a later stage for further edits and review.
+- Be sent to IT when they have been approved for addition into the database.  
+- Be shared with colleagues for edits and review. 
 
 
 ### Upload Nodes
