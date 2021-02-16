@@ -217,7 +217,7 @@ select{
 
 }
 
-#upload{
+.upload{
   background-color: #f0d700;
   border: none;
   padding: 15px 32px;
@@ -319,4 +319,23 @@ select option{
 
 tr:hover{
   background-color:#f0d700;
+}
+
+
+.tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.upload:hover .tooltiptext {
+  visibility: visible;
 }

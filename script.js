@@ -363,6 +363,9 @@ $("document").ready(function(){
     $("#getFile2").change(function(){
       //Empty the current edges
       edges = new vis.DataSet([]);
+      if(currentnodes.length < 1){
+        alert("Please import nodes prior to uploading your edges. You may use the Select Module dropdown, import button or upload nodes button.")
+      }
       //Pull the file from Client side, create a reader to read it.
       let filename = this.files[0]
       let reader = new FileReader();
