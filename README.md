@@ -3,6 +3,8 @@
 ## Features 
 
 ### Select Module 
+To import nodes from an existing module use the drop down bar. 
+![Drop Down Image](dropdown.png)
 
 
 ### Save 
