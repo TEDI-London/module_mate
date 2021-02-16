@@ -9,12 +9,11 @@ This will pull all the nodes relating to this module that we have stored in our 
 
 ### Save 
 Selecting the save button will save the current state of your nodes and edges. Changes are not autosaved. Clicking this button is essential to save your progress.
-![Save Button](save.png) 
+![Save Button](save.png)  
 Two files will be automatically saved to your Downloads. They will have the following naming convention:  
 
-moduleCode_NODES[DATE].csv for the nodes file
-or  
-moduleCode_EDGES[DATE].csv for the edges file
+- moduleCode_NODES[DATE].csv for the nodes file
+- moduleCode_EDGES[DATE].csv for the edges file
 
 The node file is a CSV file of each node and information pertaining to that node, such as it's title, code and optional/core status. 
 The edges file contains a list of each node to node connection. 
@@ -25,13 +24,15 @@ These files have several use cases. They can:
 - Be shared with colleagues for edits and review. 
 
 
-### Upload Nodes
+### Uploading Files
 
+#### Nodes
 
-### Upload Edges 
+#### Edges 
 
 
 ### Reset
+Will delete all nodes and edges on the current page. This action cannot be undone. 
 
 
 ### Set Optional 
