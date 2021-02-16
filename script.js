@@ -251,18 +251,22 @@ $("document").ready(function(){
 
       }
 
-      var data = {
-        nodes: currentnodes,
-        edges: edges,
-      };
-      network = new vis.Network(container, data, options);
-      displayedNodes = currentnodes;
-
-      network.on('click', function(properties){
-        setOpt(properties,currentnodes);
-      })
-
     });
+    if(count == 0){
+      alert("Please ensure you select at least one node to import")
+      return
+    }
+
+    var data = {
+      nodes: currentnodes,
+      edges: edges,
+    };
+    network = new vis.Network(container, data, options);
+    displayedNodes = currentnodes;
+
+    network.on('click', function(properties){
+      setOpt(properties,currentnodes);
+    })
 
     //Reset Module Drop Down
     var module_dropdown = document.getElementById("modules").selectedIndex=0;
