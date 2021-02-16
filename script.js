@@ -159,15 +159,16 @@ $("document").ready(function(){
             if(key == "module"){
               continue;
             }
+            //handles case where one node is connected to multiple.
             if(typeof(item[key]) == 'object'){
               let nodelist = item[key]
               nodelist.forEach((n)=>{
-                edges.add([{from:key,to:n}])
+                edges.add([{from:key,to:n, arrows: { to: { enabled: true, type: "arrow", },}}])
               })
             }
             else{
-              edgepair = `{from: ${key}, to: ${item[key]}}`
-              edges.add([{from:key,to:item[key]}])
+              //edgepair = `{from: ${key}, to: ${item[key]}}`
+              edges.add([{from:key,to:item[key], arrows: { to: { enabled: true, type: "arrow", },}}])
             }
 
           }
@@ -175,7 +176,6 @@ $("document").ready(function(){
 
       }});
 
-      //perhaps write the code to pull the edges too.
       var data = {
         nodes: currentnodes,
         edges: edges,
@@ -188,6 +188,7 @@ $("document").ready(function(){
 
       network.on('click',function(properties){
         console.log("Clicked on the network")
+        //If they've clicked on something
         if(properties.nodes.length > 0){
           if(setCore.checked == true){
             console.log("Set Core")
@@ -383,7 +384,7 @@ $("document").ready(function(){
           let to = elements[0];
           let from = elements[1];
 
-          let edgepair = `{from: ${from}, to: ${to}}`;
+          //let edgepair = `{from: ${from}, to: ${to}}`;
           edges.add([{from:from,to:to}])
 
         }
