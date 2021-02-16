@@ -3,8 +3,8 @@
 ## Features 
 
 ### Select Module 
-To import nodes from an existing module use the drop down bar. 
-![Drop Down Image](dropdown.png)
+To import nodes from an existing module use the drop down bar.  
+![Drop Down Image](dropdown.png)  
 This will pull all the nodes relating to this module that we have stored in our database. Note that changes you save will not persist here, and need to be sent to IT before they are updated in the system. 
 
 ### Save 
