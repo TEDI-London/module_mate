@@ -387,7 +387,7 @@ $("document").ready(function(){
           edges.add([{from:from,to:to}])
 
         }
-      });
+       });
 
       }
       var data = {
@@ -401,6 +401,23 @@ $("document").ready(function(){
       network.on('click', function(properties){
             setOpt(properties,currentnodes);
       })
+
+    });
+
+    $("#reset").click(function(){
+      //Clear nodes and edges then reload network.
+      currentnodes = new vis.DataSet();
+      edges = new vis.DataSet([]);
+      liveNodes = [];
+      var data = {
+        nodes: currentnodes,
+        edges: edges,
+      };
+      network = new vis.Network(container, data, options);
+      //Reset Module Drop Down
+      var module_dropdown = document.getElementById("modules").selectedIndex=0;
+
+
 
     })
 
