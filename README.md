@@ -27,9 +27,19 @@ These files have several use cases. They can:
 ### Uploading Files
 
 #### Nodes
+Nodes can be uploaded as a CSV file in the following format:  
+title,code,core status  
 
+core status is set to true when a node is core and false when it is optional. 
 #### Edges 
+Edges can be uploaded as a CSV file in the following format:
+from,to
 
+from and to represent a connection between two nodes.
+
+For example 
+
+CS1000,CS1002 would represent an edge going from CS1000 to CS1002.
 
 ### Reset
 Will delete all nodes and edges on the current page. This action cannot be undone. 
