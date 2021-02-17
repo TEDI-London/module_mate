@@ -60,9 +60,12 @@ Core nodes are yellow and optional nodes are grey.
 The default setting for newly imported nodes is that they are core. 
 
 
-### Network Manipulation
-   #### Edit
-    
-   #### Add
-    
-   #### Delete
+### Creating Paths
+Paths are created by joining nodes by edges. There are 3 steps to creating these pathways.
+1. To add an edge (or connection) between two nodes click the edit icon.  
+![Edit](edit.png)
+2. Then click add edge.  
+![Add](add.png)
+3.Then click the start node and drag your mouse to the next node. 
+
+You will need to repeat the above steps for each connection. 
