@@ -46,7 +46,11 @@ Will delete all nodes and edges on the current page. This action cannot be undon
 
 
 ### Set Optional 
+Whether a node is core or optional can be set by clicking on the target node when the appropriate toggle has been clicked. 
 
+In order to set core nodes ensure the core toggle is selected.
+
+In order to set optional nodes ensure the optional toggle is selected. 
 
 ### Network Manipulation
    #### Edit
