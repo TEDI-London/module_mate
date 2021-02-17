@@ -32,7 +32,7 @@ title,code,core status
 
 core status is set to true when a node is core and false when it is optional. 
 #### Edges 
-Edges can be uploaded as a CSV file in the following format:
+Edges can be uploaded as a CSV file in the following format:  
 from,to
 
 from and to represent a connection between two nodes.
@@ -47,11 +47,11 @@ Will delete all nodes and edges on the current page. This action cannot be undon
 
 ### Set Optional 
 Whether a node is core or optional can be set by clicking on the target node when the appropriate toggle has been clicked.   
-![Toggles](toggle.png)
+![Toggles](toggle.png)  
 In order to set core nodes ensure the core toggle is selected.  
-![Core Toggle](setcore.png)
+![Core Toggle](setcore.png)  
 In order to set optional nodes ensure the optional toggle is selected.  
-![Optional Toggle](setoptional.png)
+![Optional Toggle](setoptional.png)  
 
 Core nodes are yellow and optional nodes are grey.  
 
