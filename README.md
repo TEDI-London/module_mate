@@ -27,20 +27,45 @@ These files have several use cases. They can:
 ### Uploading Files
 
 #### Nodes
+Nodes can be uploaded as a CSV file in the following format:  
+title,code,core status  
 
+core status is set to true when a node is core and false when it is optional. 
 #### Edges 
+Edges can be uploaded as a CSV file in the following format:  
+from,to
 
+from and to represent a connection between two nodes.
+
+For example 
+
+CS1000,CS1002 would represent an edge going from CS1000 to CS1002.
 
 ### Reset
 Will delete all nodes and edges on the current page. This action cannot be undone. 
 
 
 ### Set Optional 
+Whether a node is core or optional can be set by clicking on the target node when the appropriate toggle has been clicked.   
+![Toggles](toggle.png)  
+In order to set core nodes ensure the core toggle is selected.  
+![Core Toggle](setcore.png)  
+In order to set optional nodes ensure the optional toggle is selected.  
+![Optional Toggle](setoptional.png)  
+
+Core nodes are yellow and optional nodes are grey.  
+
+![Example](coreexample.png)
+
+The default setting for newly imported nodes is that they are core. 
 
 
-### Network Manipulation
-   #### Edit
-    
-   #### Add
-    
-   #### Delete
+### Creating Paths
+Paths are created by joining nodes by edges. There are 3 steps to creating these pathways.
+1. To add an edge (or connection) between two nodes click the edit icon.  
+![Edit](edit.png)
+2. Then click add edge.  
+![Add](add.png)  
+3.Then click the start node and drag your mouse to the next node. 
+
+You will need to repeat the above steps for each connection. 
