@@ -46,11 +46,19 @@ Will delete all nodes and edges on the current page. This action cannot be undon
 
 
 ### Set Optional 
-Whether a node is core or optional can be set by clicking on the target node when the appropriate toggle has been clicked. 
+Whether a node is core or optional can be set by clicking on the target node when the appropriate toggle has been clicked.   
+![Toggles](toggle.png)
+In order to set core nodes ensure the core toggle is selected.  
+![Core Toggle](setcore.png)
+In order to set optional nodes ensure the optional toggle is selected.  
+![Optional Toggle](setoptional.png)
 
-In order to set core nodes ensure the core toggle is selected.
+Core nodes are yellow and optional nodes are grey.  
 
-In order to set optional nodes ensure the optional toggle is selected. 
+![Example](coreexample.png)
+
+The default setting for newly imported nodes is that they are core. 
+
 
 ### Network Manipulation
    #### Edit
