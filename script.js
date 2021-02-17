@@ -187,32 +187,8 @@ $("document").ready(function(){
       setOptional = document.getElementById("setOptional");
 
       network.on('click',function(properties){
-        console.log("Clicked on the network")
-        //If they've clicked on something
-        if(properties.nodes.length > 0){
-          if(setCore.checked == true){
-            console.log("Set Core")
-            x=properties.nodes[0];
-            let clickedNode = currentnodes.get(x);
-            clickedNode.color = "#f0d700";
-            clickedNode.core = "TRUE";
-            console.log(clickedNode)
-            currentnodes.update(clickedNode)
-            //if the property was checked
-          }
-          else{
-            if(setOptional.checked == true){
-              console.log("Set Optional")
-              x=properties.nodes[0];
-              let clickedNode = currentnodes.get(x);
-              clickedNode.color = "RGB(117,117,117)";
-              clickedNode.core = "FALSE";
-              console.log(clickedNode)
-              currentnodes.update(clickedNode)
-
-            }
-        }
-      }});
+        setOpt(properties,currentnodes);
+      });
   });
 
 
