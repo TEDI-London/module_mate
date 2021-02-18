@@ -1,3 +1,6 @@
+//current start node for module
+var start = null;
+
 //A function that downloads the CSV file client side.
 const downloadToFile = (content, filename, contentType) => {
   const contentContainer = document.createElement('a');
@@ -59,8 +62,26 @@ function setOpt(properties,currentnodes){
   }
 }
 
-function setStart(){
-  //if they've clicked on a node. :) 
+function setStart(properties,currentnodes){
+
+  if(properties.nodes.length == 1){
+    //Gets the ID of the current node clicked
+    x=properties.nodes[0];
+    //Obtains the node object of the clicked node
+    let clickedNode = currentnodes.get(x);
+    if(start){
+      //If a previous node was selected, revert back to original colour
+      start.color= getColour(start.core);
+      currentnodes.update(start)
+
+    }
+    start = clickedNode;
+    start.color= "RGB(50,230,150)"
+    currentnodes.update(start)
+
+
+  }
+  //if they've clicked on a node. :)
 
   //if set start is set.
 
@@ -203,6 +224,7 @@ $("document").ready(function(){
 
       network.on('click',function(properties){
         setOpt(properties,currentnodes);
+        setStart(properties,currentnodes);
       });
   });
 
@@ -258,6 +280,7 @@ $("document").ready(function(){
 
     network.on('click', function(properties){
       setOpt(properties,currentnodes);
+      setStart(properties,currentnodes);
     })
 
     //Reset Module Drop Down
@@ -350,6 +373,7 @@ $("document").ready(function(){
       // the on click functionality
       network.on('click', function(properties){
           setOpt(properties,currentnodes);
+          setStart(properties,currentnodes);
         })
 
 
@@ -392,6 +416,7 @@ $("document").ready(function(){
 
       network.on('click', function(properties){
             setOpt(properties,currentnodes);
+            setStart(properties,currentnodes);
       })
 
     });
