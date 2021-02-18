@@ -62,37 +62,28 @@ function setOpt(properties,currentnodes){
   }
 }
 
-function setStart(properties,currentnodes){
+function setStartPoint(properties,currentnodes){
 
-  if(properties.nodes.length == 1){
-    //Gets the ID of the current node clicked
-    x=properties.nodes[0];
-    //Obtains the node object of the clicked node
-    let clickedNode = currentnodes.get(x);
-    if(start){
-      //If a previous node was selected, revert back to original colour
-      start.color= getColour(start.core);
-      currentnodes.update(start)
+  if(setStart.checked == true){
+      if(properties.nodes.length == 1){
+        //Gets the ID of the current node clicked
+        x=properties.nodes[0];
+        //Obtains the node object of the clicked node
+        let clickedNode = currentnodes.get(x);
+        if(start){
+          //If a previous node was selected, revert back to original colour
+          start.color= getColour(start.core);
+          currentnodes.update(start)
+
+        }
+        start = clickedNode;
+        start.color= "RGB(50,230,150)"
+        currentnodes.update(start)
+
+
+      }
 
     }
-    start = clickedNode;
-    start.color= "RGB(50,230,150)"
-    currentnodes.update(start)
-
-
-  }
-  //if they've clicked on a node. :)
-
-  //if set start is set.
-
-  //check if a start point was already set.
-
-  //change colour
-
-  //update colour
-
-  //if it was set you need to update the previous node.
-  //create a variable called startNode.
 
 
 }
@@ -221,10 +212,11 @@ $("document").ready(function(){
 
       setCore = document.getElementById("setCore");
       setOptional = document.getElementById("setOptional");
+      setStart = document.getElementById("setStart");
 
       network.on('click',function(properties){
         setOpt(properties,currentnodes);
-        setStart(properties,currentnodes);
+        setStartPoint(properties,currentnodes);
       });
   });
 
@@ -280,7 +272,7 @@ $("document").ready(function(){
 
     network.on('click', function(properties){
       setOpt(properties,currentnodes);
-      setStart(properties,currentnodes);
+      setStartPoint(properties,currentnodes);
     })
 
     //Reset Module Drop Down
@@ -373,7 +365,7 @@ $("document").ready(function(){
       // the on click functionality
       network.on('click', function(properties){
           setOpt(properties,currentnodes);
-          setStart(properties,currentnodes);
+          setStartPoint(properties,currentnodes);
         })
 
 
@@ -416,7 +408,7 @@ $("document").ready(function(){
 
       network.on('click', function(properties){
             setOpt(properties,currentnodes);
-            setStart(properties,currentnodes);
+            setStartPoint(properties,currentnodes);
       })
 
     });
