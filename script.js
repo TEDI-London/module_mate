@@ -60,7 +60,7 @@ function setOpt(properties,currentnodes){
 }
 
 function setStart(){
-  //if they've clicked on a node.
+  //if they've clicked on a node. :) 
 
   //if set start is set.
 
