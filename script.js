@@ -59,7 +59,22 @@ function setOpt(properties,currentnodes){
   }
 }
 
+function setStart(){
+  //if they've clicked on a node.
 
+  //if set start is set.
+
+  //check if a start point was already set.
+
+  //change colour
+
+  //update colour
+
+  //if it was set you need to update the previous node.
+  //create a variable called startNode.
+
+
+}
 
 $("document").ready(function(){
   //Variable to keep track of all the row ID's
