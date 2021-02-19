@@ -15,13 +15,19 @@ const downloadToFile = (content, filename, contentType) => {
 
 //A function that returns the appropriate node colour depending on whether it is
 //core or optional
-function getColour(corevalue){
-  if(corevalue == "TRUE"){
-    return "#f0d700"
+function getColour(corevalue,start){
+  if(start == "TRUE"){
+    return "RGB(50,230,150)"
   }
   else{
-    return "RGB(117,117,117)"
+    if(corevalue == "TRUE"){
+      return "#f0d700"
+    }
+    else{
+      return "RGB(117,117,117)"
+    }
   }
+
 }
 
 //Set Optional
@@ -72,12 +78,14 @@ function setStartPoint(properties,currentnodes){
         let clickedNode = currentnodes.get(x);
         if(start){
           //If a previous node was selected, revert back to original colour
-          start.color= getColour(start.core);
+          start.color= getColour(start.core,"FALSE");
+          start.start = "FALSE"
           currentnodes.update(start)
 
         }
         start = clickedNode;
         start.color= "RGB(50,230,150)"
+        start.start = "TRUE"
         currentnodes.update(start)
 
 
@@ -145,6 +153,14 @@ $("document").ready(function(){
       editEdge: true,
       deleteNode: false,
       deleteEdge: true
+    },
+    edges:{
+      arrows: {
+        to: {
+          enabled: true,
+          type: "arrow"
+        }
+      }
     }
   };
 
@@ -171,8 +187,10 @@ $("document").ready(function(){
       //Then for each of the life nodes, current nodes.add
       liveNodes.forEach(function(node){
         nodeCounter = nodeCounter + 1;
-        colour = getColour(node.Core);
-        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:colour, core:node.Core}])
+        colour = getColour(node.Core, node.Start);
+        currentnodes.add([{id:node.Code, label:node.Node_Title, shape:"dot", color:colour, core:node.Core, start:node.Start}])
+        let mostRecentNode = currentnodes.get(node.Code);
+        if(node.Start == "TRUE") start = mostRecentNode;
       })
       }});
 
@@ -190,12 +208,12 @@ $("document").ready(function(){
             if(typeof(item[key]) == 'object'){
               let nodelist = item[key]
               nodelist.forEach((n)=>{
-                edges.add([{from:key,to:n, arrows: { to: { enabled: true, type: "arrow", },}}])
+                edges.add([{from:key,to:n, arrows: { to: { enabled: true, type: "arrow", }}}])
               })
             }
             else{
               //edgepair = `{from: ${key}, to: ${item[key]}}`
-              edges.add([{from:key,to:item[key], arrows: { to: { enabled: true, type: "arrow", },}}])
+              edges.add([{from:key,to:item[key], arrows: { to: { enabled: true, type: "arrow", }}}])
             }
 
           }
@@ -238,7 +256,7 @@ $("document").ready(function(){
       let node_title = i.slice(12,)
       if(curr.checked){
         count = count + 1;
-        currentnodes.add([{id:node_code,shape:"dot", color:"#f0d700", core:"TRUE", label:node_title}])
+        currentnodes.add([{id:node_code,shape:"dot", color:"#f0d700", core:"TRUE", label:node_title, start:"FALSE"}])
         //When the node is added to the network, save it's data in the live nodes
         //array. This is done because the liveNodes array is the data
         //that is exported on save.
@@ -246,6 +264,7 @@ $("document").ready(function(){
         newNode["Node_Title"] = node_title;
         newNode["Code"] = node_code;
         newNode["Core"]= "TRUE";
+        newNode["Start"] = "FALSE";
         liveNodes[count]=newNode;
       }
       //Ensure's that unchecked nodes are removed from the network.
@@ -295,7 +314,7 @@ $("document").ready(function(){
         exportEdges[node.Code] = network.getConnectedNodes(node.Code,"to");
         let connects = network.getConnectedNodes(node.Code,"to");
         networkNode = currentnodes.get(node.Code);
-        file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "\n"
+        file2 = file2 + node.Node_Title+"," +node.Code + "," + networkNode.core + "," + networkNode.start + "\n"
         //Loop through connects.
         connects.forEach((c) =>{
           edgeFile = edgeFile + node.Code + "," + c + "\n";
@@ -334,9 +353,11 @@ $("document").ready(function(){
           let title = elements[0];
           let id = elements[1];
           let corevalue = elements[2];
+          let startvalue = elements[3]
           data["Node_Title"] = title;
           data["Code"] = id;
           data["Core"]= corevalue;
+          data["Start"] = startvalue;
 
           //I can't remember what edge case I was excluding here
           //I assume there was a blank node coming through?
@@ -346,9 +367,10 @@ $("document").ready(function(){
 
           //Add new node to dataset + network
           liveNodes[count]=data;
-          colour = getColour(corevalue)
-          currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:corevalue}])
-
+          colour = getColour(corevalue, startvalue)
+          currentnodes.add([{id:id, label:title, shape:"dot", color:colour, core:corevalue, start:startvalue}])
+          let mostRecentNode = currentnodes.get(id);
+          if(startvalue == "TRUE") start = mostRecentNode;
         })
 
       };
@@ -392,7 +414,8 @@ $("document").ready(function(){
           let from = elements[1];
 
           //let edgepair = `{from: ${from}, to: ${to}}`;
-          edges.add([{from:from,to:to}])
+          edges.add([{from:from,to:to, arrows: { to: { enabled: true, type: "arrow" },}}])
+
 
         }
        });
