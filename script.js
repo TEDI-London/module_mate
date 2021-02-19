@@ -34,7 +34,6 @@ function getColour(corevalue,start){
 //Given a network, this function updates core and optional status on click
 //of each node.
 function setOpt(properties,currentnodes){
-
   //Checks if you've actually clicked on a node.
   //If this value is 0 then a user hasn't selected a node
   //They have selected a blank area on the network -- therefore nothing should happen.
@@ -87,10 +86,7 @@ function setStartPoint(properties,currentnodes){
         start.color= "RGB(50,230,150)"
         start.start = "TRUE"
         currentnodes.update(start)
-
-
       }
-
     }
 
 
@@ -167,7 +163,6 @@ $("document").ready(function(){
 
   var nodeCounter = 0;
   var liveNodes;
-  var displayedNodes;
   var network;
   var currentModule ="CUSTOM_";
   var currentnodes = new vis.DataSet();
@@ -226,7 +221,6 @@ $("document").ready(function(){
         edges: edges,
       };
       network = new vis.Network(container, data, options);
-      displayedNodes = currentnodes;
 
       setCore = document.getElementById("setCore");
       setOptional = document.getElementById("setOptional");
@@ -247,7 +241,6 @@ $("document").ready(function(){
 
     liveNodes = [];
     let count = 0;
-
     //Iterate through the list of nodes that could be imported.
     rowIDs.forEach((i) => {
       //Pull relevant details
@@ -287,7 +280,6 @@ $("document").ready(function(){
       edges: edges,
     };
     network = new vis.Network(container, data, options);
-    displayedNodes = currentnodes;
 
     network.on('click', function(properties){
       setOpt(properties,currentnodes);
@@ -295,7 +287,7 @@ $("document").ready(function(){
     })
 
     //Reset Module Drop Down
-    var module_dropdown = document.getElementById("modules").selectedIndex=0;
+    document.getElementById("modules").selectedIndex=0;
     //Close Modal
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
@@ -381,7 +373,6 @@ $("document").ready(function(){
         edges: edges,
       };
       network = new vis.Network(container, data, options);
-      displayedNodes = currentnodes;
 
       //Since we're creating a new network we need to reimplement
       // the on click functionality
@@ -427,7 +418,6 @@ $("document").ready(function(){
       };
 
       network = new vis.Network(container, data, options);
-      displayedNodes = currentnodes;
 
       network.on('click', function(properties){
             setOpt(properties,currentnodes);
@@ -447,7 +437,7 @@ $("document").ready(function(){
       };
       network = new vis.Network(container, data, options);
       //Reset Module Drop Down
-      var module_dropdown = document.getElementById("modules").selectedIndex=0;
+      document.getElementById("modules").selectedIndex=0;
 
 
 
