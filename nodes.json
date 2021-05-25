@@ -1,11 +1,11 @@
 [
   {
-    "Node_Title": "Health Safety Ethics diversity and inclusion",
+    "Node_Title": "Health & Safety",
     "Branch": "Professional Skills",
     "Code": "PS10100",
     "Module": "ENG1101",
-    "Core": "FALSE",
-    "Start":"TRUE"
+    "Core": "TRUE",
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Team Working",
@@ -13,7 +13,7 @@
     "Code": "PS10101",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Academic Skills",
@@ -21,7 +21,7 @@
     "Code": "PS10102",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Introduction to project planning",
@@ -29,7 +29,7 @@
     "Code": "PS10103",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Communication and Presentation skills",
@@ -37,31 +37,23 @@
     "Code": "PS10104",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "The Brief",
-    "Branch": "Design for Innovation",
-    "Code": "DI10100",
+    "Node_Title": "Equality, Diversity and Inclusion",
+    "Branch": "Professional Skills",
+    "Code": "PS10108",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Four questions to ask of every idea",
-    "Branch": "Design for Innovation",
-    "Code": "DI10101",
+    "Node_Title": "Ethics",
+    "Branch": "Professional Skills",
+    "Code": "PS10109",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
-  },
-  {
-    "Node_Title": "Design Ethics",
-    "Branch": "Design for Innovation",
-    "Code": "DI10102",
-    "Module": "ENG1101",
-    "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Introduction to Engineering Drawing",
@@ -69,47 +61,47 @@
     "Code": "DI10103",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Design Research",
+    "Node_Title": "The Design Research",
     "Branch": "Design for Innovation",
     "Code": "DI10104",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Biomimicry & Biophilia",
-    "Branch": "Design for Innovation",
-    "Code": "DI10105",
-    "Module": "ENG1101",
-    "Core": "TRUE",
-    "Start":"FALSE"
-  },
-  {
-    "Node_Title": "The Design process",
+    "Node_Title": "The Design process (Brief, Ethics & Bottom line)",
     "Branch": "Design for Innovation",
     "Code": "DI10106",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Technical versus complex problems",
+    "Node_Title": "Introduction to Design skills and CAD",
     "Branch": "Design for Innovation",
-    "Code": "DI10107",
-    "Module": "ENG1201",
-    "Core": "TRUE",
-    "Start":"FALSE"
-  },
-  {
-    "Node_Title": "Disruptive Insights",
-    "Branch": "Design for Innovation",
-    "Code": "DI10108",
+    "Code": "DI10121",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "CAD and 3D modelling",
+    "Branch": "Design for Innovation",
+    "Code": "DI10123",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Structure and Properties of Engineering Materials",
+    "Branch": "Engineering Apps",
+    "Code": "GE00100",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Civil Engineering Design Principles",
@@ -117,62 +109,95 @@
     "Code": "ST10100",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Engineering Materials for Construction",
-    "Branch": "Engineering Apps",
-    "Code": "ST10101",
+    "Node_Title": "Fundamentals 1",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00105",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Introduction to Civil infrastructure_systems",
-    "Branch": "Engineering Apps",
-    "Code": "ST10102",
+    "Node_Title": "Fundamentals 2",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00106",
     "Module": "ENG1101",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Reverse Engineering",
-    "Branch": "Engineering Apps",
-    "Code": "ST10103",
+    "Node_Title": "Algebra",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00107",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Structure and properties of matter",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00101",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Chemical Combination of Atoms",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00102",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Processing/Manufacturing of Engineering Materials",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00103",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Engineering materials",
-    "Branch": "Engineering Apps",
-    "Code": "ST10104",
+    "Node_Title": "Fundamental Engineering Principles",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00104",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Manufacturing processes",
+    "Node_Title": "Statics",
     "Branch": "Engineering Apps",
-    "Code": "ST10105",
+    "Code": "GE10103",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Fluid Mechanics",
+    "Node_Title": "Kinematics",
     "Branch": "Engineering Apps",
-    "Code": "ST10106",
+    "Code": "GE10104",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Civil Engineering and Construction",
+    "Node_Title": "Kinetics",
     "Branch": "Engineering Apps",
-    "Code": "ST10107",
-    "Module": "ENG1201",
-    "Core": "TRUE"
+    "Code": "GE10105",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Electrical and Electronic Principles",
+    "Branch": "Engineering Apps",
+    "Code": "EE00100",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Basic Electrical Circuits",
@@ -180,7 +205,7 @@
     "Code": "EE10101",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Resistive Circuits",
@@ -188,7 +213,7 @@
     "Code": "EE10102",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Equivalent Circuits and Power Transfer",
@@ -196,7 +221,7 @@
     "Code": "EE10103",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Passive Components",
@@ -204,7 +229,7 @@
     "Code": "EE10104",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "The Amplifier",
@@ -212,158 +237,518 @@
     "Code": "EE10105",
     "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Power Systems for Smart Cities",
+    "Node_Title": "Semiconductors",
     "Branch": "Engineering Apps",
     "Code": "EE10106",
-    "Module": "ENG1201",
+    "Module": "ENG1102",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Electronic Data for Smart City Infrastructures",
+    "Node_Title": "Introduction to Logic",
     "Branch": "Engineering Apps",
     "Code": "EE10107",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Testing and Properties of Engineering materials",
+    "Branch": "Engineering Apps",
+    "Code": "GE10107",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Manufacturing processes",
+    "Branch": "Engineering Apps",
+    "Code": "GE10108",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Differentiation 1",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00101",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Probability",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00116",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Differentiation 2",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00117",
     "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Sensors",
-    "Branch": "Engineering Apps",
-    "Code": "EE10108",
-    "Module": "ENG1202",
+    "Node_Title": "Finite element analysis",
+    "Branch": "Maths",
+    "Code": "MS10103",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Control",
+    "Node_Title": "Manufacturing Processes 1",
     "Branch": "Engineering Apps",
-    "Code": "EE10109",
-    "Module": "ENG1202",
+    "Code": "GE10100",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Manufacturing processes ",
+    "Node_Title": "Manufacturing Processes 2",
     "Branch": "Engineering Apps",
-    "Code": "ME10100",
-    "Module": "ENG1301",
+    "Code": "GE10101",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Fabrication and joining method",
+    "Node_Title": "Materials Characteristics",
     "Branch": "Engineering Apps",
-    "Code": "ME10101",
-    "Module": "ENG1301",
+    "Code": "GE10110",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Design for manufacturing prototypes",
-    "Branch": "Engineering Apps",
-    "Code": "ME10102",
-    "Module": "ENG1301",
+    "Branch": "Design for Innovation",
+    "Code": "DI10125",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Thermodynamics and Heat Transfer",
-    "Branch": "Engineering Apps",
-    "Code": "ME10103",
-    "Module": "ENG1102",
+    "Node_Title": "Introduction to Prototyping (Inc Strategic 3 Resolutions & Promise)",
+    "Branch": "Design for Innovation",
+    "Code": "DI10115",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Statics",
-    "Branch": "Engineering Apps",
-    "Code": "ME10104",
-    "Module": "ENG1102",
+    "Node_Title": "Strategic prototyping",
+    "Branch": "Design for Innovation",
+    "Code": "DI10116",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Kinematics",
-    "Branch": "Engineering Apps",
-    "Code": "ME10105",
-    "Module": "ENG1102",
+    "Node_Title": "Three resolutions of prototyping",
+    "Branch": "Design for Innovation",
+    "Code": "DI10117",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Kinetics",
-    "Branch": "Engineering Apps",
-    "Code": "ME10106",
-    "Module": "ENG1102",
+    "Node_Title": "The Promise",
+    "Branch": "Design for Innovation",
+    "Code": "DI10118",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "classification of materials",
-    "Branch": "Engineering Apps",
-    "Code": "ME10107",
-    "Module": "ENG1301",
+    "Node_Title": "Design Methods and Techniques",
+    "Branch": "Design for Innovation",
+    "Code": "DI10119",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Characteristics and properties of a variety of materials",
-    "Branch": "Engineering Apps",
-    "Code": "ME10108",
-    "Module": "ENG1301",
+    "Node_Title": "Morphological analysis and evaluation",
+    "Branch": "Design for Innovation",
+    "Code": "DI10120",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Costing",
     "Branch": "Business Skills",
     "Code": "BS10100",
-    "Module": "ENG1102",
+    "Module": "ENG1201",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Statistics 1",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00114",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Statistics 2",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00115",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Engineering maths",
+    "Branch": "Maths",
+    "Code": "MS10100",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Mathematical modelling",
+    "Branch": "Maths",
+    "Code": "MS10101",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Information Modelling",
+    "Branch": "Maths",
+    "Code": "MS10102",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Sensors",
+    "Branch": "Engineering Apps",
+    "Code": "EE10110",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Control",
+    "Branch": "Engineering Apps",
+    "Code": "EE10111",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Principles of Computer Programming",
+    "Branch": "Computing Skills",
+    "Code": "CS10104",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Computer architecture",
+    "Branch": "Computing Skills",
+    "Code": "CS10105",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Programming fundamentals",
+    "Branch": "Computing Skills",
+    "Code": "CS10106",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Using Numerical analysis packages",
+    "Branch": "Computing Skills",
+    "Code": "CS10107",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Big Data",
+    "Branch": "Computing Skills",
+    "Code": "CS10108",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Programming Paradigms",
+    "Branch": "Computing Skills",
+    "Code": "CS10109",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Computational thinking",
+    "Branch": "Computing Skills",
+    "Code": "CS10110",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Problem solving with Python",
+    "Branch": "Computing Skills",
+    "Code": "CS10111",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Python Programming",
+    "Branch": "Computing Skills",
+    "Code": "CS10112",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Code of practice on Cyber security & safety",
+    "Branch": "Computing Skills",
+    "Code": "CS10113",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Vectors",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00110",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Trigonometry 1",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00111",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Exponentials & Logarithmic Functions",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00112",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Technical versus complex problems",
+    "Branch": "Design for Innovation",
+    "Code": "DI10107",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Design Philosophy (Inc Narrative Design & Structure)",
+    "Branch": "Design for Innovation",
+    "Code": "DI10111",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Creating vs Problem solving",
+    "Branch": "Design for Innovation",
+    "Code": "DI10112",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Mapping and visualising systems",
+    "Branch": "Design for Innovation",
+    "Code": "DI10113",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Graphic design and visual language",
+    "Branch": "Design for Innovation",
+    "Code": "DI10122",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Civil Engineering and Construction",
+    "Branch": "Engineering Apps",
+    "Code": "ST10107",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Power Systems for Smart Cities",
+    "Branch": "Engineering Apps",
+    "Code": "EE10108",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Electronic Data for Smart City Infrastructures",
+    "Branch": "Engineering Apps",
+    "Code": "EE10109",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Engineering Materials for Construction",
+    "Branch": "Engineering Apps",
+    "Code": "ST10101",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Fluid Mechanics",
+    "Branch": "Engineering Apps",
+    "Code": "GE10109",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Thermodynamics and Heat Transfer",
+    "Branch": "Engineering Apps",
+    "Code": "GE10102",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Smart technologies",
+    "Branch": "Computing Skills",
+    "Code": "CS10100",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Smart Urban Planning and Development",
+    "Branch": "Computing Skills",
+    "Code": "CS10101",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Designing for Smart Cities",
+    "Branch": "Computing Skills",
+    "Code": "CS10102",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Computing Fundamentals for Smart Cities",
+    "Branch": "Computing Skills",
+    "Code": "CS10103",
+    "Module": "ENG1301",
+    "Core": "TRUE",
+    "Start": "FALSE"
   },
   {
     "Node_Title": "Sustainability and Engineering Applications",
     "Branch": "Sustainability",
     "Code": "SU10100",
-    "Module": "ENG1201",
+    "Module": "ENG1301",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Smart technologies",
-    "Branch": "Computing",
-    "Code": "CS10100",
-    "Module": "ENG1201",
+    "Node_Title": "Integration 1",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00103",
+    "Module": "ENG1302",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Smart Urban Planning and Development",
-    "Branch": "Computing",
-    "Code": "CS10101",
-    "Module": "ENG1201",
+    "Node_Title": "Basic Matrices",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00104",
+    "Module": "ENG1302",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Designing for Smart Cities",
-    "Branch": "Computing",
-    "Code": "CS10102",
-    "Module": "ENG1201",
+    "Node_Title": "Integration 2",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00118",
+    "Module": "ENG1302",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
   },
   {
-    "Node_Title": "Computing Fundamentals for Smart Cities",
-    "Branch": "Computing",
-    "Code": "CS10103",
-    "Module": "ENG1201",
+    "Node_Title": "Critical reflective practice",
+    "Branch": "Professional Skills",
+    "Code": "PS10105",
+    "Module": "ENG1302",
     "Core": "TRUE",
-    "Start":"FALSE"
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Creative Writing for Engineers",
+    "Branch": "Professional Skills",
+    "Code": "PS10106",
+    "Module": "ENG1302",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Three Roles That Language Plays",
+    "Branch": "Professional Skills",
+    "Code": "PS10107",
+    "Module": "ENG1302",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Problem reframing",
+    "Branch": "Design for Innovation",
+    "Code": "DI10114",
+    "Module": "ENG1302",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Managerial, Entrepreneurial and Design mindsets",
+    "Branch": "Design for Innovation",
+    "Code": "DI10124",
+    "Module": "ENG1302",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Establishing Metrics and Success Indicators",
+    "Branch": "Business Skills",
+    "Code": "BS10101",
+    "Module": "ENG1302",
+    "Core": "TRUE",
+    "Start": "FALSE"
   }
 ]
