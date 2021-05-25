@@ -1,47 +1,95 @@
 Node_Title,Branch,Code,Module,Core,Start
-"Health, Safety, Ethics, diversity and inclusion",Professional Skills,PS10100,ENG1101,TRUE,FALSE
+Health & Safety,Professional Skills,PS10100,ENG1101,TRUE,FALSE
 Team Working,Professional Skills,PS10101,ENG1101,TRUE,FALSE
 Academic Skills,Professional Skills,PS10102,ENG1101,TRUE,FALSE
 Introduction to project planning,Professional Skills,PS10103,ENG1101,TRUE,FALSE
-Communication and Presentation skills,Professional Skills,PS10104,ENG1101,TRUE,FALSE
-The Brief,Design for Innovation,DI10100,ENG1101,TRUE,FALSE
-Four questions to ask of every idea,Design for Innovation,DI10101,ENG1101,TRUE,FALSE
-Design Ethics,Design for Innovation,DI10102,ENG1101,TRUE,FALSE
+Communication and Presentation skills,Professional Skills,PS10104,ENG1101,TRUE,FALSE
+"Equality, Diversity and Inclusion",Professional Skills,PS10108,ENG1101,TRUE,FALSE
+Ethics,Professional Skills,PS10109,ENG1101,TRUE,FALSE
 Introduction to Engineering Drawing,Design for Innovation,DI10103,ENG1101,TRUE,FALSE
-Design Research,Design for Innovation,DI10104,ENG1101,TRUE,FALSE
-Biomimicry & Biophilia,Design for Innovation,DI10105,ENG1101,TRUE,FALSE
-The Design process,Design for Innovation,DI10106,ENG1101,TRUE,FALSE
-Technical versus complex problems,Design for Innovation,DI10107,ENG1201 ,TRUE,FALSE
-Disruptive Insights,Design for Innovation,DI10108,ENG1101,TRUE,FALSE
+The Design Research,Design for Innovation,DI10104,ENG1101,TRUE,FALSE
+"The Design process (Brief, Ethics & Bottom line)",Design for Innovation,DI10106,ENG1101,TRUE,FALSE
+Introduction to Design skills and CAD,Design for Innovation,DI10121,ENG1101,TRUE,FALSE
+CAD and 3D modelling,Design for Innovation,DI10123,ENG1101,TRUE,FALSE
+Structure and Properties of Engineering Materials,Engineering Apps,GE00100,ENG1101,TRUE,FALSE
 Civil Engineering Design Principles,Engineering Apps,ST10100,ENG1101,TRUE,FALSE
-Engineering Materials for Construction,Engineering Apps,ST10101,ENG1101,TRUE,FALSE
-Introduction to Civil infrastructure_systems,Engineering Apps,ST10102,ENG1101,TRUE,FALSE
-Reverse Engineering,Engineering Apps,ST10103,ENG1102,TRUE,FALSE
-Engineering materials,Engineering Apps,ST10104,ENG1102,TRUE,FALSE
-Manufacturing processes,Engineering Apps,ST10105,ENG1102,TRUE,FALSE
-Fluid Mechanics,Engineering Apps,ST10106,ENG1102,TRUE,FALSE
-Civil Engineering and Construction,Engineering Apps,ST10107,ENG1201,TRUE,FALSE
-Basic Electrical Circuits,Engineering Apps,EE10101,ENG1102,TRUE,FALSE
-Resistive Circuits,Engineering Apps,EE10102,ENG1102,TRUE,FALSE
-Equivalent Circuits and Power Transfer,Engineering Apps,EE10103,ENG1102,TRUE,FALSE
-Passive Components,Engineering Apps,EE10104,ENG1102,TRUE,FALSE
-The Amplifier,Engineering Apps,EE10105,ENG1102,TRUE,FALSE
-Power Systems for Smart Cities,Engineering Apps,EE10106,ENG1201,TRUE,FALSE
-Electronic Data for Smart City Infrastructures ,Engineering Apps,EE10107,ENG1201 ,TRUE,FALSE
-Sensors,Engineering Apps,EE10108,ENG1202 ,TRUE,FALSE
-Control,Engineering Apps,EE10109,ENG1202 ,TRUE,FALSE
-"Understand in depth the main characteristics of manufacturing processes and their effects on design function, operation, cost etc",Engineering Apps,ME10100,ENG1301,TRUE,FALSE
-"Fabrication and joining methods, automation, CNC machining, additive manufacturing/ 3D printing",Engineering Apps,ME10101,ENG1301,TRUE,FALSE
-Design for manufacturing prototypes,Engineering Apps,ME10102,ENG1301,TRUE,FALSE
-Thermodynamics and Heat Transfer,Engineering Apps,ME10103,ENG1102 ,TRUE,FALSE
-Statics,Engineering Apps,ME10104,ENG1102 ,TRUE,FALSE
-Kinematics,Engineering Apps,ME10105,ENG1102 ,TRUE,FALSE
-Kinetics,Engineering Apps,ME10106,ENG1102 ,TRUE,FALSE
-"appreciate the classification of materials including, metals, polymers, ceramics, composites etc",Engineering Apps,ME10107,ENG1301,TRUE,FALSE
-Characteristics and properties of a variety of materials,Engineering Apps,ME10108,ENG1301,TRUE,FALSE
-Costing,Business Skills,BS10100,ENG1102 ,TRUE,FALSE
-Sustainability and Engineering Applications,Sustainability,SU10100,ENG1201 ,TRUE,FALSE
-Smart technologies,Computing,CS10100,ENG1201 ,TRUE,FALSE
-Smart Urban Planning and Development,Computing,CS10101,ENG1201 ,TRUE,FALSE
-Designing for Smart Cities,Computing,CS10102,ENG1201 ,TRUE,FALSE
-Computing Fundamentals for Smart Cities,Computing,CS10103,ENG1201 ,TRUE,FALSE
+Fundamentals 1  ,Maths (Foundation),MS00105,ENG1101,TRUE,FALSE
+Fundamentals 2,Maths (Foundation),MS00106,ENG1101,TRUE,FALSE
+Algebra,Maths (Foundation),MS00107,ENG1101,TRUE,FALSE
+Structure and properties of matter,Engineering Apps (Foundation),GE00101,ENG1101,TRUE,FALSE
+Chemical Combination of Atoms,Engineering Apps (Foundation),GE00102,ENG1101,TRUE,FALSE
+Processing/Manufacturing of Engineering Materials,Engineering Apps (Foundation),GE00103,ENG1102 ,TRUE,FALSE
+Fundamental Engineering Principles,Engineering Apps (Foundation),GE00104,ENG1102 ,TRUE,FALSE
+Statics,Engineering Apps,GE10103,ENG1102 ,TRUE,FALSE
+Kinematics,Engineering Apps,GE10104,ENG1102 ,TRUE,FALSE
+Kinetics,Engineering Apps,GE10105,ENG1102 ,TRUE,FALSE
+Electrical and Electronic Principles,Engineering Apps,EE00100,ENG1102 ,TRUE,FALSE
+Basic Electrical Circuits,Engineering Apps,EE10101,ENG1102 ,TRUE,FALSE
+Resistive Circuits,Engineering Apps,EE10102,ENG1102 ,TRUE,FALSE
+Equivalent Circuits and Power Transfer,Engineering Apps,EE10103,ENG1102 ,TRUE,FALSE
+Passive Components,Engineering Apps,EE10104,ENG1102 ,TRUE,FALSE
+The Amplifier,Engineering Apps,EE10105,ENG1102 ,TRUE,FALSE
+Semiconductors,Engineering Apps,EE10106,ENG1102 ,TRUE,FALSE
+Introduction to Logic,Engineering Apps,EE10107,ENG1102 ,TRUE,FALSE
+Testing and Properties of Engineering materials,Engineering Apps,GE10107,ENG1102 ,TRUE,FALSE
+Manufacturing processes,Engineering Apps,GE10108,ENG1102 ,TRUE,FALSE
+Differentiation 1,Maths (Foundation),MS00101,ENG1102 ,TRUE,FALSE
+Probability,Maths (Foundation),MS00116,ENG1102 ,TRUE,FALSE
+Differentiation 2,Maths (Foundation),MS00117,ENG1201,TRUE,FALSE
+Finite element analysis,Maths ,MS10103,ENG1201,TRUE,FALSE
+Manufacturing Processes 1,Engineering Apps,GE10100,ENG1201,TRUE,FALSE
+Manufacturing Processes 2,Engineering Apps,GE10101,ENG1201,TRUE,FALSE
+Materials Characteristics,Engineering Apps,GE10110,ENG1201,TRUE,FALSE
+Design for manufacturing prototypes,Design for Innovation,DI10125,ENG1201,TRUE,FALSE
+Introduction to Prototyping (Inc Strategic 3 Resolutions & Promise),Design for Innovation,DI10115,ENG1201,TRUE,FALSE
+Strategic prototyping,Design for Innovation,DI10116,ENG1201,TRUE,FALSE
+Three resolutions of prototyping,Design for Innovation,DI10117,ENG1201,TRUE,FALSE
+The Promise,Design for Innovation,DI10118,ENG1201,TRUE,FALSE
+Design Methods and Techniques,Design for Innovation,DI10119,ENG1201,TRUE,FALSE
+Morphological analysis and evaluation,Design for Innovation,DI10120,ENG1201,TRUE,FALSE
+Costing,Business Skills,BS10100,ENG1201,TRUE,FALSE
+Statistics 1,Maths (Foundation),MS00114,ENG1202,TRUE,FALSE
+Statistics 2,Maths (Foundation),MS00115,ENG1202,TRUE,FALSE
+Engineering maths,Maths ,MS10100,ENG1202,TRUE,FALSE
+Mathematical modelling,Maths ,MS10101,ENG1202,TRUE,FALSE
+Information Modelling,Maths ,MS10102,ENG1202,TRUE,FALSE
+Sensors,Engineering Apps,EE10110,ENG1202,TRUE,FALSE
+Control,Engineering Apps,EE10111,ENG1202,TRUE,FALSE
+Principles of Computer Programming,Computing Skills,CS10104,ENG1202,TRUE,FALSE
+Computer architecture,Computing Skills,CS10105,ENG1202,TRUE,FALSE
+Programming fundamentals,Computing Skills,CS10106,ENG1202,TRUE,FALSE
+Using Numerical analysis packages,Computing Skills,CS10107,ENG1202,TRUE,FALSE
+Big Data,Computing Skills,CS10108,ENG1202,TRUE,FALSE
+Programming Paradigms,Computing Skills,CS10109,ENG1202,TRUE,FALSE
+Computational thinking,Computing Skills,CS10110,ENG1202,TRUE,FALSE
+Problem solving with Python,Computing Skills,CS10111,ENG1202,TRUE,FALSE
+Python Programming,Computing Skills,CS10112,ENG1202,TRUE,FALSE
+Code of practice on Cyber security & safety,Computing Skills,CS10113,ENG1202,TRUE,FALSE
+Vectors ,Maths (Foundation),MS00110,ENG1301,TRUE,FALSE
+Trigonometry 1,Maths (Foundation),MS00111,ENG1301,TRUE,FALSE
+Exponentials & Logarithmic Functions,Maths (Foundation),MS00112,ENG1301,TRUE,FALSE
+Technical versus complex problems,Design for Innovation,DI10107,ENG1301,TRUE,FALSE
+Design Philosophy (Inc Narrative Design & Structure),Design for Innovation,DI10111,ENG1301,TRUE,FALSE
+Creating vs Problem solving,Design for Innovation,DI10112,ENG1301,TRUE,FALSE
+Mapping and visualising systems,Design for Innovation,DI10113,ENG1301,TRUE,FALSE
+Graphic design and visual language,Design for Innovation,DI10122,ENG1301,TRUE,FALSE
+Civil Engineering and Construction,Engineering Apps,ST10107,ENG1301,TRUE,FALSE
+Power Systems for Smart Cities,Engineering Apps,EE10108,ENG1301,TRUE,FALSE
+Electronic Data for Smart City Infrastructures ,Engineering Apps,EE10109,ENG1301,TRUE,FALSE
+Engineering Materials for Construction,Engineering Apps,ST10101,ENG1301,TRUE,FALSE
+Fluid Mechanics,Engineering Apps,GE10109,ENG1301,TRUE,FALSE
+Thermodynamics and Heat Transfer,Engineering Apps,GE10102,ENG1301,TRUE,FALSE
+Smart technologies,Computing Skills,CS10100,ENG1301,TRUE,FALSE
+Smart Urban Planning and Development,Computing Skills,CS10101,ENG1301,TRUE,FALSE
+Designing for Smart Cities,Computing Skills,CS10102,ENG1301,TRUE,FALSE
+Computing Fundamentals for Smart Cities,Computing Skills,CS10103,ENG1301,TRUE,FALSE
+Sustainability and Engineering Applications,Sustainability,SU10100,ENG1301,TRUE,FALSE
+Integration 1,Maths (Foundation),MS00103,ENG1302,TRUE,FALSE
+Basic Matrices,Maths (Foundation),MS00104,ENG1302,TRUE,FALSE
+Integration 2,Maths (Foundation),MS00118,ENG1302,TRUE,FALSE
+Critical reflective practice,Professional Skills,PS10105,ENG1302,TRUE,FALSE
+Creative Writing for Engineers,Professional Skills,PS10106,ENG1302,TRUE,FALSE
+Three Roles That Language Plays,Professional Skills,PS10107,ENG1302,TRUE,FALSE
+Problem reframing,Design for Innovation,DI10114,ENG1302,TRUE,FALSE
+"Managerial, Entrepreneurial and Design mindsets",Design for Innovation,DI10124,ENG1302,TRUE,FALSE
+Establishing Metrics and Success Indicators,Business Skills,BS10101,ENG1302,TRUE,FALSE
