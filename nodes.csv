@@ -8,6 +8,7 @@ Communication and Presentation skills,Professional Skills,PS10104,ENG1101,TRUE,
 Ethics,Professional Skills,PS10109,ENG1101,TRUE,FALSE
 Introduction to Engineering Drawing,Design for Innovation,DI10103,ENG1101,TRUE,FALSE
 The Design Research,Design for Innovation,DI10104,ENG1101,TRUE,FALSE
+Concept Design,Design for Innovation,DI10126,ENG1101,TRUE,FALSE
 "The Design process (Brief, Ethics & Bottom line)",Design for Innovation,DI10106,ENG1101,TRUE,FALSE
 Introduction to Design skills and CAD,Design for Innovation,DI10121,ENG1101,TRUE,FALSE
 CAD and 3D modelling,Design for Innovation,DI10123,ENG1101,TRUE,FALSE
@@ -18,11 +19,17 @@ Fundamentals 2,Maths (Foundation),MS00106,ENG1101,TRUE,FALSE
 Algebra,Maths (Foundation),MS00107,ENG1101,TRUE,FALSE
 Structure and properties of matter,Engineering Apps (Foundation),GE00101,ENG1101,TRUE,FALSE
 Chemical Combination of Atoms,Engineering Apps (Foundation),GE00102,ENG1101,TRUE,FALSE
+Functions,Maths (Foundation),MS00102,ENG1102 ,TRUE,FALSE
+Graphs and Charts,Maths (Foundation),MS00108,ENG1102 ,TRUE,FALSE
+Geometry,Maths (Foundation),MS00109,ENG1102 ,TRUE,FALSE
 Processing/Manufacturing of Engineering Materials,Engineering Apps (Foundation),GE00103,ENG1102 ,TRUE,FALSE
 Fundamental Engineering Principles,Engineering Apps (Foundation),GE00104,ENG1102 ,TRUE,FALSE
 Statics,Engineering Apps,GE10103,ENG1102 ,TRUE,FALSE
 Kinematics,Engineering Apps,GE10104,ENG1102 ,TRUE,FALSE
 Kinetics,Engineering Apps,GE10105,ENG1102 ,TRUE,FALSE
+Motors Node,Engineering Apps,GE10111,ENG1102 ,TRUE,FALSE
+"Human Factors, Ergonomics, Anthropometrics",Engineering Apps,GE10112,ENG1102 ,TRUE,FALSE
+"Ethics, human machine, IP",Engineering Apps,GE10113,ENG1102 ,TRUE,FALSE
 Electrical and Electronic Principles,Engineering Apps,EE00100,ENG1102 ,TRUE,FALSE
 Basic Electrical Circuits,Engineering Apps,EE10101,ENG1102 ,TRUE,FALSE
 Resistive Circuits,Engineering Apps,EE10102,ENG1102 ,TRUE,FALSE
@@ -33,8 +40,8 @@ Semiconductors,Engineering Apps,EE10106,ENG1102 ,TRUE,FALSE
 Introduction to Logic,Engineering Apps,EE10107,ENG1102 ,TRUE,FALSE
 Testing and Properties of Engineering materials,Engineering Apps,GE10107,ENG1102 ,TRUE,FALSE
 Manufacturing processes,Engineering Apps,GE10108,ENG1102 ,TRUE,FALSE
-Differentiation 1,Maths (Foundation),MS00101,ENG1102 ,TRUE,FALSE
-Probability,Maths (Foundation),MS00116,ENG1102 ,TRUE,FALSE
+Differentiation 1,Maths (Foundation),MS00101,ENG1201,TRUE,FALSE
+Probability,Maths (Foundation),MS00116,ENG1201,TRUE,FALSE
 Differentiation 2,Maths (Foundation),MS00117,ENG1201,TRUE,FALSE
 Finite element analysis,Maths ,MS10103,ENG1201,TRUE,FALSE
 Manufacturing Processes 1,Engineering Apps,GE10100,ENG1201,TRUE,FALSE
@@ -42,9 +49,6 @@ Manufacturing Processes 2,Engineering Apps,GE10101,ENG1201,TRUE,FALSE
 Materials Characteristics,Engineering Apps,GE10110,ENG1201,TRUE,FALSE
 Design for manufacturing prototypes,Design for Innovation,DI10125,ENG1201,TRUE,FALSE
 Introduction to Prototyping (Inc Strategic 3 Resolutions & Promise),Design for Innovation,DI10115,ENG1201,TRUE,FALSE
-Strategic prototyping,Design for Innovation,DI10116,ENG1201,TRUE,FALSE
-Three resolutions of prototyping,Design for Innovation,DI10117,ENG1201,TRUE,FALSE
-The Promise,Design for Innovation,DI10118,ENG1201,TRUE,FALSE
 Design Methods and Techniques,Design for Innovation,DI10119,ENG1201,TRUE,FALSE
 Morphological analysis and evaluation,Design for Innovation,DI10120,ENG1201,TRUE,FALSE
 Costing,Business Skills,BS10100,ENG1201,TRUE,FALSE
