@@ -72,6 +72,14 @@
     "Start": "FALSE"
   },
   {
+    "Node_Title": "Concept Design",
+    "Branch": "Design for Innovation",
+    "Code": "DI10126",
+    "Module": "ENG1101",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
     "Node_Title": "The Design process (Brief, Ethics & Bottom line)",
     "Branch": "Design for Innovation",
     "Code": "DI10106",
@@ -152,6 +160,30 @@
     "Start": "FALSE"
   },
   {
+    "Node_Title": "Functions",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00102",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Graphs and Charts",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00108",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Geometry",
+    "Branch": "Maths (Foundation)",
+    "Code": "MS00109",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
     "Node_Title": "Processing/Manufacturing of Engineering Materials",
     "Branch": "Engineering Apps (Foundation)",
     "Code": "GE00103",
@@ -187,6 +219,30 @@
     "Node_Title": "Kinetics",
     "Branch": "Engineering Apps",
     "Code": "GE10105",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Motors Node",
+    "Branch": "Engineering Apps",
+    "Code": "GE10111",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Human Factors, Ergonomics, Anthropometrics",
+    "Branch": "Engineering Apps",
+    "Code": "GE10112",
+    "Module": "ENG1102",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Ethics, human machine, IP",
+    "Branch": "Engineering Apps",
+    "Code": "GE10113",
     "Module": "ENG1102",
     "Core": "TRUE",
     "Start": "FALSE"
@@ -275,7 +331,7 @@
     "Node_Title": "Differentiation 1",
     "Branch": "Maths (Foundation)",
     "Code": "MS00101",
-    "Module": "ENG1102",
+    "Module": "ENG1201",
     "Core": "TRUE",
     "Start": "FALSE"
   },
@@ -283,7 +339,7 @@
     "Node_Title": "Probability",
     "Branch": "Maths (Foundation)",
     "Code": "MS00116",
-    "Module": "ENG1102",
+    "Module": "ENG1201",
     "Core": "TRUE",
     "Start": "FALSE"
   },
@@ -339,30 +395,6 @@
     "Node_Title": "Introduction to Prototyping (Inc Strategic 3 Resolutions & Promise)",
     "Branch": "Design for Innovation",
     "Code": "DI10115",
-    "Module": "ENG1201",
-    "Core": "TRUE",
-    "Start": "FALSE"
-  },
-  {
-    "Node_Title": "Strategic prototyping",
-    "Branch": "Design for Innovation",
-    "Code": "DI10116",
-    "Module": "ENG1201",
-    "Core": "TRUE",
-    "Start": "FALSE"
-  },
-  {
-    "Node_Title": "Three resolutions of prototyping",
-    "Branch": "Design for Innovation",
-    "Code": "DI10117",
-    "Module": "ENG1201",
-    "Core": "TRUE",
-    "Start": "FALSE"
-  },
-  {
-    "Node_Title": "The Promise",
-    "Branch": "Design for Innovation",
-    "Code": "DI10118",
     "Module": "ENG1201",
     "Core": "TRUE",
     "Start": "FALSE"
