@@ -782,5 +782,69 @@
     "Module": "ENG1302",
     "Core": "TRUE",
     "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Team Working",
+    "Branch": "Professional Skills",
+    "Code": "PS10101",
+    "Module": "SUM2021",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Introduction to project planning",
+    "Branch": "Professional Skills",
+    "Code": "PS10103",
+    "Module": "SUM2021",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Structure and properties of matter",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00101",
+    "Module": "SUM2021",
+    "Core": "FALSE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Chemical Combination of Atoms",
+    "Branch": "Engineering Apps (Foundation)",
+    "Code": "GE00102",
+    "Module": "SUM2021",
+    "Core": "FALSE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "The Design Research",
+    "Branch": "Design for Innovation",
+    "Code": "DI10104",
+    "Module": "SUM2021",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Structure and Properties of Engineering Materials",
+    "Branch": "Engineering Apps",
+    "Code": "GE00100",
+    "Module": "SUM2021",
+    "Core": "FALSE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Manufacturing processes",
+    "Branch": "Engineering Apps",
+    "Code": "GE10108",
+    "Module": "SUM2021",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
+    "Node_Title": "Sustainability and Engineering Applications",
+    "Branch": "Sustainability",
+    "Code": "SU10100",
+    "Module": "SUM2021",
+    "Core": "TRUE",
+    "Start": "FALSE"
   }
 ]
