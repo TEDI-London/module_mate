@@ -480,6 +480,14 @@
     "Start": "FALSE"
   },
   {
+    "Node_Title": "Introduction to Modelling & Simulation in Engineering Design",
+    "Branch": "Engineering Apps",
+    "Code": "GE10114",
+    "Module": "ENG1202",
+    "Core": "TRUE",
+    "Start": "FALSE"
+  },
+  {
     "Node_Title": "Principles of Computer Programming",
     "Branch": "Computing Skills",
     "Code": "CS10104",
@@ -782,8 +790,8 @@
     "Module": "ENG1302",
     "Core": "TRUE",
     "Start": "FALSE"
-  },
-  {
+  }
+    {
     "Node_Title": "Team Working",
     "Branch": "Professional Skills",
     "Code": "PS10101",
